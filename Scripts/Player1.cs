@@ -1,7 +1,6 @@
 using Godot;
 using System;
 using Godot.Collections;
-using MultiplayerInputSharp;
 using MultiplayerProject.Scripts;
 
 public partial class Player1 : Player
