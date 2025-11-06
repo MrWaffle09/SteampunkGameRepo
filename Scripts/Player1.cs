@@ -6,6 +6,7 @@ using MultiplayerProject.Scripts;
 public partial class Player1 : Player
 {
     public override int ID { get; set; } = 0;
+    public override int speed { get; set; } = 1000;
 
     public override void Die()
     {
@@ -14,12 +15,13 @@ public partial class Player1 : Player
 
     public void _GetInput()
     {
-        Vector2 inputDirection = MultiplayerInput.GetVector(0, "MenuLeft", "MenuUp", "MenuRight", "MenuDown", 1);
+        Vector2 inputDirection = Input.GetVector("MenuLeftP1", "MenuRightP1", "MenuUpP1", "MenuDownP1");
         Velocity = inputDirection * speed;
     }
     
     public override void _PhysicsProcess(double delta)
     {
         _GetInput();
+        MoveAndSlide();
     }
 }
