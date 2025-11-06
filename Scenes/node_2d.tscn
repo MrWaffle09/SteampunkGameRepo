@@ -1,3 +1,10 @@
-[gd_scene format=3 uid="uid://dtwti2c6x0aqa"]
+[gd_scene load_steps=2 format=3 uid="uid://dtwti2c6x0aqa"]
+
+[ext_resource type="PackedScene" uid="uid://cn8wiqee1gwme" path="res://Scenes/microwave.tscn" id="1_j2wod"]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="Microwave" parent="." instance=ExtResource("1_j2wod")]
+position = Vector2(-1, -6)
+
+[node name="Camera2D" type="Camera2D" parent="."]

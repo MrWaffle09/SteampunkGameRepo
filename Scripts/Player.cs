@@ -1,11 +1,12 @@
-﻿using Godot;
+﻿using System;
+using Godot;
 
 namespace MultiplayerProject.Scripts;
 
 public abstract partial class Player : CharacterBody2D
 {
 
-    [Export] public int ID;
+    [Export] public abstract int ID { get; set; }
     [Export] public virtual int speed { get; set; } = 100;
     [Export] public virtual int maxHealth { get; set; } = 100;
     public virtual int currentHealth { get; set; }
@@ -27,15 +28,10 @@ public abstract partial class Player : CharacterBody2D
 
     }
 
-    public void _InputEvent(InputEvent @event)
-    {
-        if (@event.Device == ID)
-        {
-            Vector2 inputDirection = Input.GetVector("MenuLeft", "MenuRight", "MenuUp", "MenuDown");
-            Velocity = inputDirection * speed;
-        }
-    }
+
     
+ 
+
 
     
 }
