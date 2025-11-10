@@ -1,11 +1,9 @@
-[gd_scene load_steps=2 format=4 uid="uid://cgoctc7myuy0e"]
+[gd_scene load_steps=3 format=4 uid="uid://cgoctc7myuy0e"]
 
 [ext_resource type="PackedScene" uid="uid://s1xr3drow0nl" path="res://tilemap.tscn" id="2_8ysdc"]
+[ext_resource type="PackedScene" uid="uid://dhcj5c533dqsv" path="res://microbob.tscn" id="2_buwwh"]
 
 [node name="ExampleLevel" type="Node2D"]
-
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(3, 3)
 
 [node name="floor" parent="." instance=ExtResource("2_8ysdc")]
 position = Vector2(-8, -42)
@@ -25,3 +23,10 @@ tile_map_data = PackedByteArray("AAAHAPb/AAAeAAgAAAAHAPf/AAAeAAkAAAAHAPj/AAAeAAo
 
 [node name="tablestuff" parent="." instance=ExtResource("2_8ysdc")]
 position = Vector2(-7, 51)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_buwwh")]
+scale = Vector2(0.633898, 0.677189)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+scale = Vector2(1.57754, 1.47669)
+zoom = Vector2(4.164, 4.99)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dhcj5c533dqsv"]
+[gd_scene load_steps=9 format=3 uid="uid://dhcj5c533dqsv"]
 
 [ext_resource type="Texture2D" uid="uid://b4ix52p0dkmq2" path="res://Assets/Microwave/Microwave/Idle.png" id="1_n4ccd"]
 
@@ -45,6 +45,10 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n4ccd"]
+radius = 10.9919
+height = 31.9765
+
 [node name="CharacterBody2D" type="CharacterBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -52,3 +56,8 @@ self_modulate = Color(0.643137, 0.364706, 0, 1)
 position = Vector2(0, -24)
 sprite_frames = SubResource("SpriteFrames_od6gn")
 frame_progress = 0.285802
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -13)
+rotation = 1.53248
+shape = SubResource("CapsuleShape2D_n4ccd")
