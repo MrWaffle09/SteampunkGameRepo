@@ -110,7 +110,8 @@ script = ExtResource("1_gp2l2")
 self_modulate = Color(0.643137, 0.364706, 0, 1)
 position = Vector2(0, -24)
 sprite_frames = SubResource("SpriteFrames_od6gn")
-animation = &"jump"
+animation = &"idle"
+autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, -14)
