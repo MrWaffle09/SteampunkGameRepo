@@ -1,6 +1,7 @@
-[gd_scene load_steps=18 format=3 uid="uid://c34swoytxvj0n"]
+[gd_scene load_steps=19 format=3 uid="uid://c34swoytxvj0n"]
 
 [ext_resource type="Texture2D" uid="uid://1p5roim1063f" path="res://Assets/Mechanic Mike/Mechanic Mike/idle.png" id="1_kejhl"]
+[ext_resource type="Script" uid="uid://cvupue0imqao5" path="res://mike.gd" id="1_qblse"]
 [ext_resource type="Texture2D" uid="uid://cn01i54kr5vbx" path="res://Assets/Mechanic Mike/Mechanic Mike/run.png" id="2_7bjg0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7bjg0"]
@@ -113,6 +114,7 @@ height = 14.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 position = Vector2(0, 7)
+script = ExtResource("1_qblse")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -16)

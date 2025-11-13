@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://6x3thxnrr1mb"]
 
-[ext_resource type="Script" uid="uid://bxbkj4o7jks18" path="res://Scenes/Player.cs" id="1_cvnsp"]
+[ext_resource type="Script" uid="uid://bxbkj4o7jks18" path="res://Scripts/microwave.cs" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://ddw4ykt2kvw2k" path="res://Assets/ExampleSprite.png" id="2_6t5aa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vgqql"]
