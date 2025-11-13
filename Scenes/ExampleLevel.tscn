@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://s1xr3drow0nl" path="res://tilemap.tscn" id="2_8ysdc"]
 [ext_resource type="PackedScene" uid="uid://dhcj5c533dqsv" path="res://microbob.tscn" id="2_buwwh"]
-[ext_resource type="PackedScene" uid="uid://cw8wpcg5s7tbm" path="res://capybaraenemy.tscn" id="3_buwwh"]
+[ext_resource type="PackedScene" uid="uid://c34swoytxvj0n" path="res://mike.tscn" id="3_buwwh"]
 
 [node name="ExampleLevel" type="Node2D"]
 position = Vector2(10, 1)
@@ -37,6 +37,5 @@ scale = Vector2(0.633898, 0.677189)
 scale = Vector2(1.57754, 1.47669)
 zoom = Vector2(4.164, 4.99)
 
-[node name="capy" parent="." instance=ExtResource("3_buwwh")]
-position = Vector2(176, 40)
-scale = Vector2(0.507049, 0.55588)
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_buwwh")]
+position = Vector2(61, -19)
