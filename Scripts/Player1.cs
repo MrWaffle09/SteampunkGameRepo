@@ -5,10 +5,10 @@ using MultiplayerProject.Scripts;
 
 public partial class Player1 : Player
 {
-    public override int ID { get; set; } = 0;
-    public override int speed { get; set; } = 100;
+    public int ID { get; set; } = 0;
+    public int speed { get; set; } = 100;
 
-    public override void Die()
+    public void Die()
     {
         QueueFree();
     }
