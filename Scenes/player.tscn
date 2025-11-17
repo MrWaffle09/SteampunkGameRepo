@@ -56,7 +56,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_f1ek2")
 }],
 "loop": true,
-"name": &"default",
+"name": &"idle",
 "speed": 5.0
 }]
 
@@ -70,7 +70,8 @@ script = ExtResource("1_cvnsp")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_tx1dd")
-frame_progress = 0.63157
+animation = &"idle"
+frame_progress = 0.194546
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 7)
