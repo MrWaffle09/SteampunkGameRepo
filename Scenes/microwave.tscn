@@ -1,0 +1,69 @@
+[gd_scene load_steps=11 format=3 uid="uid://cn8wiqee1gwme"]
+
+[ext_resource type="Script" uid="uid://busr4glxgkn18" path="res://Scripts/Player1.cs" id="1_yei7y"]
+[ext_resource type="Texture2D" uid="uid://b4xfw7jybkn1b" path="res://Assets/Microwave/Microwave/Walk.png" id="2_uir15"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j328o"]
+atlas = ExtResource("2_uir15")
+region = Rect2(0, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dqd4l"]
+atlas = ExtResource("2_uir15")
+region = Rect2(80, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ag481"]
+atlas = ExtResource("2_uir15")
+region = Rect2(160, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_prln5"]
+atlas = ExtResource("2_uir15")
+region = Rect2(240, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hnrfx"]
+atlas = ExtResource("2_uir15")
+region = Rect2(320, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gom1q"]
+atlas = ExtResource("2_uir15")
+region = Rect2(400, 0, 80, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tx1dd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j328o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dqd4l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ag481")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_prln5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hnrfx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gom1q")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gymyn"]
+radius = 7.0
+height = 18.0
+
+[node name="Microwave" type="CharacterBody2D"]
+script = ExtResource("1_yei7y")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_tx1dd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 7)
+shape = SubResource("CapsuleShape2D_gymyn")
