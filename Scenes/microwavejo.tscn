@@ -1,7 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://duqngnqypkr7f"]
+[gd_scene load_steps=17 format=3 uid="uid://duqngnqypkr7f"]
 
-[ext_resource type="Texture2D" uid="uid://b4ix52p0dkmq2" path="res://Assets/Microwave/Microwave/Idle.png" id="1_akvxi"]
-[ext_resource type="Texture2D" uid="uid://bpqooj8q2vys7" path="res://Assets/Microwave/Microwave/Walk.png" id="2_n7v8p"]
+[ext_resource type="Texture2D" uid="uid://c6vh10kqgol0q" path="res://Assets/Microwave/Microwave/Idle.png" id="1_akvxi"]
+[ext_resource type="Script" uid="uid://busr4glxgkn18" path="res://Scripts/Microwave.cs" id="1_n7v8p"]
+[ext_resource type="Texture2D" uid="uid://b4xfw7jybkn1b" path="res://Assets/Microwave/Microwave/Walk.png" id="2_n7v8p"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jstk6"]
 atlas = ExtResource("1_akvxi")
@@ -97,18 +98,17 @@ animations = [{
 radius = 8.0
 height = 26.0
 
-[node name="Node2D" type="Node2D"]
+[node name="Microwave" type="CharacterBody2D"]
+script = ExtResource("1_n7v8p")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 self_modulate = Color(0.917647, 0.65098, 0.286275, 1)
 position = Vector2(0, -24)
 sprite_frames = SubResource("SpriteFrames_a1qt4")
 animation = &"walk"
 frame_progress = 0.194025
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, -17)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_akvxi")

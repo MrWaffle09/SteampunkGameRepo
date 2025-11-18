@@ -1,83 +1,8 @@
 [gd_scene load_steps=19 format=3 uid="uid://6x3thxnrr1mb"]
 
-[ext_resource type="Texture2D" uid="uid://1p5roim1063f" path="res://Assets/Mechanic Mike/Mechanic Mike/idle.png" id="2_y7pfa"]
-[ext_resource type="Texture2D" uid="uid://cn01i54kr5vbx" path="res://Assets/Mechanic Mike/Mechanic Mike/run.png" id="3_jkpjw"]
-
-[sub_resource type="CSharpScript" id="CSharpScript_k3tjr"]
-script/source = "using Godot;
-using System;
-
-public partial class Player : CharacterBody2D
-{
-	[Export] public int Speed { get; set; } = 70;
-
-	private AnimatedSprite2D _anim;
-
-	public override void _Ready()
-	{
-		_anim = GetNode<AnimatedSprite2D>(\"AnimatedSprite2D\");
-	}
-
-	// Handles Movement (supports both arrows and WASD)
-	public void GetInput()
-	{
-		float x = 0;
-		float y = 0;
-
-		// Horizontal input
-		if (Input.IsActionPressed(\"ui_left\") || Input.IsKeyPressed(Key.A))
-			x -= 1;
-		if (Input.IsActionPressed(\"ui_right\") || Input.IsKeyPressed(Key.D))
-			x += 1;
-
-		// Vertical input
-		if (Input.IsActionPressed(\"ui_up\") || Input.IsKeyPressed(Key.W))
-			y -= 1;
-		if (Input.IsActionPressed(\"ui_down\") || Input.IsKeyPressed(Key.S))
-			y += 1;
-
-		Vector2 inputDirection = new Vector2(x, y).Normalized();
-		Velocity = inputDirection * Speed;
-	}
-
-	public override void _PhysicsProcess(double delta)
-	{
-		GetInput();
-
-		// Flip facing direction
-		if (!Mathf.IsZeroApprox(Velocity.X))
-			_anim.FlipH = Velocity.X > 0;
-
-		bool isMoving = !Velocity.IsZeroApprox();
-
-		// Choose animation
-		if (isMoving)
-		{
-			if (_anim.Animation != \"walk\")
-				_anim.Play(\"walk\");
-			_anim.SpeedScale = 1.0f;
-		}
-		else
-		{
-			if (_anim.SpriteFrames.HasAnimation(\"idle\"))
-			{
-				if (_anim.Animation != \"idle\")
-					_anim.Play(\"idle\");
-				_anim.SpeedScale = 1.0f;
-			}
-			else
-			{
-				if (_anim.Animation != \"walk\")
-					_anim.Play(\"walk\");
-				_anim.Frame = 0;
-				_anim.SpeedScale = 0.0f;
-			}
-		}
-
-		MoveAndSlide();
-	}
-}
-"
+[ext_resource type="Script" uid="uid://cusuqp85n0baw" path="res://Scenes/Mechanic.cs" id="1_m44dx"]
+[ext_resource type="Texture2D" uid="uid://bl8o7cr08niws" path="res://Assets/Mechanic Mike/Mechanic Mike/idle.png" id="2_y7pfa"]
+[ext_resource type="Texture2D" uid="uid://cftsundjgw7th" path="res://Assets/Mechanic Mike/Mechanic Mike/run.png" id="3_jkpjw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6t5aa"]
 atlas = ExtResource("2_y7pfa")
@@ -187,8 +112,8 @@ animations = [{
 radius = 7.0
 height = 18.0
 
-[node name="Player" type="CharacterBody2D"]
-script = SubResource("CSharpScript_k3tjr")
+[node name="Mechanic" type="CharacterBody2D"]
+script = ExtResource("1_m44dx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 modulate = Color(0.882353, 0.458824, 0.223529, 1)
