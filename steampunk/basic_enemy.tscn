@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://js6nlqrwhqlb"]
+
+[ext_resource type="Script" uid="uid://dkce4d1tn5nd5" path="res://BasicEnemy.cs" id="1_rwafm"]
+[ext_resource type="Texture2D" uid="uid://dkfk18rdxfcs0" path="res://icon.svg" id="2_m2rku"]
+[ext_resource type="PackedScene" uid="uid://cerw6canp0bba" path="res://character_body_2d.tscn" id="3_m2rku"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rwafm"]
+size = Vector2(119, 118)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rwafm"]
+radius = 355.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_rwafm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, -2)
+scale = Vector2(0.984375, 0.96875)
+texture = ExtResource("2_m2rku")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -1)
+shape = SubResource("RectangleShape2D_rwafm")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_rwafm")
+
+[node name="player" parent="." instance=ExtResource("3_m2rku")]
+position = Vector2(330, 20)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
