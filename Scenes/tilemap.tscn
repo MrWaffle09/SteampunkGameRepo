@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://s1xr3drow0nl"]
 
-[ext_resource type="Texture2D" uid="uid://c2dw2vul73ja5" path="res://Assets/Occult_Steampunk/Occult_Steampunk/Tiles/Occult_Decorations.png" id="1_3qqdj"]
-[ext_resource type="Texture2D" uid="uid://c7nyqu50pqgip" path="res://Assets/Occult_Steampunk/Occult_Steampunk/Tiles/Occult_Autotiles.png" id="2_dqtar"]
-[ext_resource type="Texture2D" uid="uid://dy727dng7facu" path="res://Assets/Occult_Steampunk/Occult_Steampunk/Tiles/Occult_FloorsWall.png" id="3_w2evn"]
+[ext_resource type="Texture2D" uid="uid://1o0t03vk8gh4" path="res://Assets/Occult_Steampunk/Occult_Steampunk/Tiles/Occult_Decorations.png" id="1_3qqdj"]
+[ext_resource type="Texture2D" uid="uid://mo0m2b3skg42" path="res://Assets/Occult_Steampunk/Occult_Steampunk/Tiles/Occult_Autotiles.png" id="2_dqtar"]
+[ext_resource type="Texture2D" uid="uid://crrqwwydus3nd" path="res://Assets/Occult_Steampunk/Occult_Steampunk/Tiles/Occult_FloorsWall.png" id="3_w2evn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kdubu"]
 texture = ExtResource("1_3qqdj")
