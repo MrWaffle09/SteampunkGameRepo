@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://7a5bf0ov0422"]
+[gd_scene load_steps=16 format=3 uid="uid://duqngnqypkr7f"]
 
 [ext_resource type="Texture2D" uid="uid://b4ix52p0dkmq2" path="res://Assets/Microwave/Microwave/Idle.png" id="1_akvxi"]
 [ext_resource type="Texture2D" uid="uid://bpqooj8q2vys7" path="res://Assets/Microwave/Microwave/Walk.png" id="2_n7v8p"]
