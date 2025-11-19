@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=4 uid="uid://cgoctc7myuy0e"]
+[gd_scene load_steps=6 format=4 uid="uid://cgoctc7myuy0e"]
 
 [ext_resource type="PackedScene" uid="uid://s1xr3drow0nl" path="res://Scenes/tilemap.tscn" id="2_8ysdc"]
+[ext_resource type="PackedScene" uid="uid://duqngnqypkr7f" path="res://Scenes/microwavejo.tscn" id="2_buwwh"]
+[ext_resource type="PackedScene" uid="uid://6x3thxnrr1mb" path="res://Scenes/mechanic.tscn" id="3_buwwh"]
+[ext_resource type="PackedScene" uid="uid://bk6qvtkenikmu" path="res://Scenes/bulldozer.tscn" id="3_gl4sr"]
+[ext_resource type="PackedScene" uid="uid://cw8wpcg5s7tbm" path="res://Scenes/capybara.tscn" id="5_rvkij"]
 
 [node name="ExampleLevel" type="Node2D"]
 position = Vector2(10, 1)
@@ -26,3 +30,18 @@ tile_map_data = PackedByteArray("AAAHAPb/AAAeAAgAAAAHAPf/AAAeAAkAAAAHAPj/AAAeAAo
 [node name="furniture" parent="." instance=ExtResource("2_8ysdc")]
 position = Vector2(-124, -24)
 tile_map_data = PackedByteArray("AAACAP7/AgAEAAcAAAACAP//AgAEAAgAAAAHAAAAAgAEAAAAAAAHAAEAAgAEAAEAAAAHAAIAAgAEAAIAAAAIAAAAAgAFAAAAAAAIAAEAAgAFAAEAAAAIAAIAAgAFAAIAAAAJAAAAAgAGAAAAAAAJAAEAAgAGAAEAAAAJAAIAAgAGAAIAAAARAP//AQAFAAMAAAARAAAAAQAFAAQAAAARAAEAAQAFAAUAAAASAP//AQAGAAMAAAASAAAAAQAGAAQAAAASAAEAAQAGAAUAAAATAP//AQAHAAMAAAATAAAAAQAHAAQAAAATAAEAAQAHAAUAAAAUAPz/AAADAAAAAAAUAP3/AAADAAEAAAAUAP7/AAADAAIAAAAVAPz/AAAEAAAAAAAWAPz/AAAFAAAAAAAWAP3/AAAGAAAAAAAWAP7/AAAGAAEAAAAWAP//AAAGAAIAAAAXAP3/AAAHAAAAAAAXAP7/AAAHAAEAAAAXAP//AAAHAAIAAAASAPv/AAAMAAAAAAASAPz/AAAMAAEAAAASAP3/AAAMAAIAAAARAPv/AAALAAAAAAARAPz/AAALAAEAAAAMAPv/AAAbAAoAAAAMAPz/AAAbAAsAAAAMAP3/AAAbAAwAAAANAPv/AAAcAAoAAAANAPz/AAAcAAsAAAANAP3/AAAcAAwAAAAOAPv/AAAdAAoAAAAOAPz/AAAdAAsAAAAOAP3/AAAdAAwAAAAGAPr/AAAcAAgAAAAGAPv/AAAcAAkAAAAHAPr/AAAdAAgAAAAHAPv/AAAdAAkAAAAQAPv/AAAaAAAAAAAQAPz/AAAaAAEAAAAQAP3/AAAaAAIAAAAKAPz/AAAeAAEAAAAKAP3/AAAeAAIAAAACAPv/AAAXAAAAAAACAPz/AAAXAAEAAAACAP3/AAAXAAIAAAADAPv/AAAYAAAAAAADAPz/AAAYAAEAAAADAP3/AAAYAAIAAAAEAPv/AAAZAAAAAAAEAPz/AAAZAAEAAAAEAP3/AAAZAAIAAAANAAAAAAAYAAYAAAANAAEAAAAYAAcAAAANAAIAAAAYAAgAAAAOAAAAAAAZAAYAAAAOAAEAAAAZAAcAAAAOAAIAAAAZAAgAAAADAAIAAAAEAAQAAAADAAMAAAAEAAUAAAAEAAIAAAAFAAQAAAAEAAMAAAAFAAUAAAA=")
+
+[node name="Mechanic" parent="." instance=ExtResource("3_buwwh")]
+
+[node name="Bulldozer" parent="." instance=ExtResource("3_gl4sr")]
+position = Vector2(47, 26)
+
+[node name="Microwave" parent="." instance=ExtResource("2_buwwh")]
+position = Vector2(72, -21)
+
+[node name="Camera2D" type="Camera2D" parent="Microwave"]
+position_smoothing_enabled = true
+position_smoothing_speed = 3.0
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("5_rvkij")]
+position = Vector2(-24, -27)

@@ -3,7 +3,7 @@ using System;
 using Godot.Collections;
 using MultiplayerProject.Scripts;
 
-public partial class Player1 : Player
+public partial class Microwave : Player
 {
 	public int ID { get; set; } = 0;
 	public int speed { get; set; } = 100;
