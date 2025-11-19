@@ -1,6 +1,6 @@
 [gd_scene load_steps=19 format=3 uid="uid://6x3thxnrr1mb"]
 
-[ext_resource type="Script" uid="uid://cusuqp85n0baw" path="res://Scenes/Mechanic.cs" id="1_m44dx"]
+[ext_resource type="Script" uid="uid://cusuqp85n0baw" path="res://Scripts/Mechanic.cs" id="1_m44dx"]
 [ext_resource type="Texture2D" uid="uid://bl8o7cr08niws" path="res://Assets/Mechanic Mike/Mechanic Mike/idle.png" id="2_y7pfa"]
 [ext_resource type="Texture2D" uid="uid://cftsundjgw7th" path="res://Assets/Mechanic Mike/Mechanic Mike/run.png" id="3_jkpjw"]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=40 format=3 uid="uid://bk6qvtkenikmu"]
 
 [ext_resource type="Texture2D" uid="uid://bqdgf24y6qkhs" path="res://Assets/Bulldozer/Bulldozer/Parry.png" id="1_bw2s7"]
-[ext_resource type="Script" uid="uid://dexm1amuqdkin" path="res://Scenes/Bulldozer.cs" id="1_flffy"]
+[ext_resource type="Script" uid="uid://dexm1amuqdkin" path="res://Scripts/Bulldozer.cs" id="1_flffy"]
 [ext_resource type="Texture2D" uid="uid://xc0gbo8dpbxm" path="res://Assets/Bulldozer/Bulldozer/Attack.png" id="2_flffy"]
 [ext_resource type="Texture2D" uid="uid://ysxy1a236tmm" path="res://Assets/Bulldozer/Bulldozer/Death.png" id="3_hqyu7"]
 [ext_resource type="Texture2D" uid="uid://bfqnejybi4hfw" path="res://Assets/Bulldozer/Bulldozer/Hit.png" id="4_8uw2f"]
