@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public static class GameManager
+public partial class GameManager : Node
 {
     public static int CapyID = 0;
     public static int MechID = 0;  

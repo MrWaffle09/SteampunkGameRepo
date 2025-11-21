@@ -1,6 +1,6 @@
 [gd_scene load_steps=95 format=3 uid="uid://csswqoy7jndic"]
 
-[ext_resource type="Script" uid="uid://b832m4gw3y3lx" path="res://Scenes/CharacterSelector.cs" id="1_tevl1"]
+[ext_resource type="Script" uid="uid://b832m4gw3y3lx" path="res://Scripts/CharacterSelector.cs" id="1_tevl1"]
 [ext_resource type="Texture2D" uid="uid://cl76qfu5tfkd6" path="res://Assets/charlieTheCapybaraAnimationSheet.png" id="2_hit4a"]
 [ext_resource type="Texture2D" uid="uid://bqdgf24y6qkhs" path="res://Assets/Bulldozer/Bulldozer/Parry.png" id="3_x6twy"]
 [ext_resource type="Texture2D" uid="uid://xc0gbo8dpbxm" path="res://Assets/Bulldozer/Bulldozer/Attack.png" id="4_irl6f"]
@@ -645,6 +645,7 @@ offset_bottom = 1079.0
 color = Color(0, 0, 0, 1)
 
 [node name="CapyLabel" type="RichTextLabel" parent="ColorRect"]
+layout_mode = 0
 offset_left = 97.0
 offset_top = 760.0
 offset_right = 536.0
@@ -654,6 +655,7 @@ text = "Press A"
 horizontal_alignment = 1
 
 [node name="BullLabel" type="RichTextLabel" parent="ColorRect"]
+layout_mode = 0
 offset_left = 1395.0
 offset_top = 760.0
 offset_right = 1834.0
@@ -664,6 +666,7 @@ text = "Press Y
 horizontal_alignment = 1
 
 [node name="MicroLabel" type="RichTextLabel" parent="ColorRect"]
+layout_mode = 0
 offset_left = 956.0
 offset_top = 760.0
 offset_right = 1395.0
@@ -674,6 +677,7 @@ text = "Press X
 horizontal_alignment = 1
 
 [node name="MechLabel" type="RichTextLabel" parent="ColorRect"]
+layout_mode = 0
 offset_left = 569.0
 offset_top = 760.0
 offset_right = 1008.0
