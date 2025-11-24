@@ -1,5 +1,7 @@
 using Godot;
 using System;
+using System.Collections.Generic;
+
 
 public partial class CharacterSelector : Node2D
 {
@@ -13,6 +15,8 @@ public partial class CharacterSelector : Node2D
     private RichTextLabel _mechText;
     private RichTextLabel _bullText;
 
+    private List<int> UsedIDs = new List<int>();
+
     public override void _Ready()
     {
         _capyText = GetNode<RichTextLabel>("ColorRect/CapyLabel");
@@ -21,17 +25,20 @@ public partial class CharacterSelector : Node2D
         _bullText = GetNode<RichTextLabel>("ColorRect/BullLabel");
     }
 
+    
     public override void _Input(InputEvent @event)
     {
-        if(@event.IsActionPressed("Interact"))
+        if (@event.IsActionPressed("Interact"))
         {
             if (CapyCanSelect)
             {
-                GameManager.CapyID = @event.Device;
-                CapyCanSelect = false;
-                _capyText.Text = "Seleceted";
-                GD.Print(@event.Device);
-                GD.Print(GameManager.CapyID);
+                if (!UsedIDs.Contains(@event.Device))
+                {
+                    GameManager.CapyID = @event.Device;
+                    CapyCanSelect = false;
+                    _capyText.Text = "Seleceted";
+                    UsedIDs.Add(@event.Device);
+                }
             }
         }
 
@@ -39,30 +46,47 @@ public partial class CharacterSelector : Node2D
         {
             if (MechCanSelect)
             {
-                GameManager.MechID = @event.Device;
-                MechCanSelect = false;
-                _mechText.Text = "Selected";
+                if (!UsedIDs.Contains(@event.Device))
+                {
+                    GameManager.MechID = @event.Device;
+                    MechCanSelect = false;
+                    _mechText.Text = "Selected";
+                    UsedIDs.Add(@event.Device);
+                }
             }
         }
 
         if (@event.IsActionPressed("PowerUp"))
         {
             if (MicroCanSelect)
+            {
+                if (!UsedIDs.Contains(@event.Device))
                 {
-                GameManager.MicroID = @event.Device;
-                MicroCanSelect = false;
-                _microText.Text = "Selected";
+                    GameManager.MicroID = @event.Device;
+                    MicroCanSelect = false;
+                    _microText.Text = "Selected";
+                    UsedIDs.Add(@event.Device);
                 }
+            }
         }
 
         if (@event.IsActionPressed("Y"))
         {
             if (BullCanSelect)
+            {
+                if (!UsedIDs.Contains(@event.Device))
                 {
-                GameManager.BullID = @event.Device;
-                BullCanSelect = false;
-                _bullText.Text = "Selected";
+                    GameManager.BullID = @event.Device;
+                    BullCanSelect = false;
+                    _bullText.Text = "Selected";
+                    UsedIDs.Add(@event.Device);
                 }
+            }
+        }
+
+        if (@event.IsActionPressed("Pause"))
+        {
+            GetTree().ChangeSceneToFile("res://Scenes/ExampleLevel.tscn");
         }
     }
 }

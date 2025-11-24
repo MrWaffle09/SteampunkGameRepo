@@ -1,4 +1,4 @@
-[gd_scene load_steps=95 format=3 uid="uid://csswqoy7jndic"]
+[gd_scene load_steps=96 format=3 uid="uid://csswqoy7jndic"]
 
 [ext_resource type="Script" uid="uid://b832m4gw3y3lx" path="res://Scripts/CharacterSelector.cs" id="1_tevl1"]
 [ext_resource type="Texture2D" uid="uid://cl76qfu5tfkd6" path="res://Assets/charlieTheCapybaraAnimationSheet.png" id="2_hit4a"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dye0slnjow4fb" path="res://Assets/Bulldozer/Bulldozer/Walk.png" id="8_3es2i"]
 [ext_resource type="Texture2D" uid="uid://c6vh10kqgol0q" path="res://Assets/Microwave/Microwave/Idle.png" id="9_gaaop"]
 [ext_resource type="Texture2D" uid="uid://b4xfw7jybkn1b" path="res://Assets/Microwave/Microwave/Walk.png" id="10_jop44"]
+[ext_resource type="Texture2D" uid="uid://cjtdx1ncjdij1" path="res://Assets/XboxMenu.png" id="11_hit4a"]
 [ext_resource type="Texture2D" uid="uid://bl8o7cr08niws" path="res://Assets/Mechanic Mike/Mechanic Mike/idle.png" id="11_lrvhe"]
 [ext_resource type="Texture2D" uid="uid://cftsundjgw7th" path="res://Assets/Mechanic Mike/Mechanic Mike/run.png" id="12_h26s2"]
 
@@ -721,6 +722,23 @@ sprite_frames = SubResource("SpriteFrames_wnwnq")
 animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.439281
+
+[node name="Sprite2D" type="Sprite2D" parent="ColorRect"]
+position = Vector2(703.047, 962.885)
+scale = Vector2(2.71813, 2.48461)
+texture = ExtResource("11_hit4a")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/Sprite2D"]
+offset_left = -545.614
+offset_top = -130.356
+offset_right = 741.386
+offset_bottom = 126.644
+theme_override_font_sizes/normal_font_size = 45
+text = "START"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="ColorRect"]
 modulate = Color(0.882353, 0.458824, 0.223529, 1)

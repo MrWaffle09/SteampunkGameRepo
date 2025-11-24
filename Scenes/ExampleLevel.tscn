@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://s1xr3drow0nl" path="res://Scenes/tilemap.tscn" id="2_8ysdc"]
 [ext_resource type="PackedScene" uid="uid://duqngnqypkr7f" path="res://Scenes/microwavejo.tscn" id="2_buwwh"]
 [ext_resource type="PackedScene" uid="uid://bk6qvtkenikmu" path="res://Scenes/bulldozer.tscn" id="3_gl4sr"]
-[ext_resource type="PackedScene" uid="uid://bv6m2d612dkjw" path="res://Scenes/BasicEnemy.tscn" id="4_gl4sr"]
+[ext_resource type="PackedScene" path="res://Scenes/BasicEnemy.tscn" id="4_gl4sr"]
 
 [node name="ExampleLevel" type="Node2D"]
 position = Vector2(10, 1)
