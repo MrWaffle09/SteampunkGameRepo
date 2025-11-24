@@ -29,7 +29,7 @@ public partial class CharacterSelector : Node2D
             {
                 GameManager.CapyID = @event.Device;
                 CapyCanSelect = false;
-                _capyText.Text = "Selceted";
+                _capyText.Text = "Seleceted";
                 GD.Print(@event.Device);
                 GD.Print(GameManager.CapyID);
             }
@@ -42,9 +42,27 @@ public partial class CharacterSelector : Node2D
                 GameManager.MechID = @event.Device;
                 MechCanSelect = false;
                 _mechText.Text = "Selected";
-                GD.Print(@event.Device);
-                GD.Print(GameManager.MechID);
             }
+        }
+
+        if (@event.IsActionPressed("PowerUp"))
+        {
+            if (MicroCanSelect)
+                {
+                GameManager.MicroID = @event.Device;
+                MicroCanSelect = false;
+                _microText.Text = "Selected";
+                }
+        }
+
+        if (@event.IsActionPressed("Y"))
+        {
+            if (BullCanSelect)
+                {
+                GameManager.BullID = @event.Device;
+                BullCanSelect = false;
+                _bullText.Text = "Selected";
+                }
         }
     }
 }
