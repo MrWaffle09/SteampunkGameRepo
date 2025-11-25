@@ -1,14 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://bv6m2d612dkjw"]
+[gd_scene load_steps=7 format=3 uid="uid://bv6m2d612dkjw"]
 
 [ext_resource type="Script" uid="uid://ohkgkdg33gjl" path="res://Scripts/BasicEnemy.cs" id="1_6x443"]
-[ext_resource type="Texture2D" uid="uid://0a752a2s0vjm" path="res://icon.png" id="2_b7xc3"]
+[ext_resource type="Texture2D" uid="uid://bj23uqblwrccn" path="res://icon.png" id="2_b7xc3"]
 [ext_resource type="PackedScene" uid="uid://bk6qvtkenikmu" path="res://Scenes/bulldozer.tscn" id="3_b7xc3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hp7c0"]
 size = Vector2(35, 37)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g722j"]
-radius = 79.4796
+radius = 128.01563
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b7xc3"]
+size = Vector2(38, 38)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_6x443")
@@ -26,11 +29,19 @@ texture = ExtResource("2_b7xc3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 light_mask = 2
-position = Vector2(2, -1)
+position = Vector2(-5, -6)
 shape = SubResource("CircleShape2D_g722j")
 
 [node name="Bulldozer" parent="Area2D" instance=ExtResource("3_b7xc3")]
 position = Vector2(199, 122)
 
+[node name="Damage(area2D)" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Damage(area2D)"]
+position = Vector2(2, -2)
+shape = SubResource("RectangleShape2D_b7xc3")
+debug_color = Color(0.82487744, 0.3319567, 0.576088, 0.41960785)
+
 [connection signal="body_entered" from="Area2D" to="." method="OnPlayerEntered"]
 [connection signal="body_exited" from="Area2D" to="." method="OnPlayerOut"]
+[connection signal="body_entered" from="Damage(area2D)" to="." method="BodyEntered"]
