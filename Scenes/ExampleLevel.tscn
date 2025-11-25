@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bv6m2d612dkjw" path="res://Scenes/BasicEnemy.tscn" id="4_gl4sr"]
 
 [node name="ExampleLevel" type="Node2D"]
-position = Vector2(10, 1)
+position = Vector2(5, 139)
 
 [node name="floor" parent="." instance=ExtResource("2_8ysdc")]
 position = Vector2(-8, -42)
