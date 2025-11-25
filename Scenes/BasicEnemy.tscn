@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bv6m2d612dkjw"]
+[gd_scene load_steps=5 format=3 uid="uid://bv6m2d612dkjw"]
 
 [ext_resource type="Script" uid="uid://ohkgkdg33gjl" path="res://Scripts/BasicEnemy.cs" id="1_6x443"]
-[ext_resource type="Texture2D" uid="uid://0a752a2s0vjm" path="res://icon.png" id="2_b7xc3"]
-[ext_resource type="PackedScene" uid="uid://bk6qvtkenikmu" path="res://Scenes/bulldozer.tscn" id="3_b7xc3"]
+[ext_resource type="Texture2D" uid="uid://c5ih6mb04yc5k" path="res://icon.png" id="2_b7xc3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hp7c0"]
 size = Vector2(35, 37)
@@ -28,9 +27,6 @@ texture = ExtResource("2_b7xc3")
 light_mask = 2
 position = Vector2(2, -1)
 shape = SubResource("CircleShape2D_g722j")
-
-[node name="Bulldozer" parent="Area2D" instance=ExtResource("3_b7xc3")]
-position = Vector2(199, 122)
 
 [connection signal="body_entered" from="Area2D" to="." method="OnPlayerEntered"]
 [connection signal="body_exited" from="Area2D" to="." method="OnPlayerOut"]
