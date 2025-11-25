@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://v63l6ry17pdb"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nlly2"]
-bg_color = Color(0.8821638, 0.87398577, 0.8812443, 0.4627451)
-shadow_size = 5
-shadow_offset = Vector2(0, 3)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tdv2v"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7ywqe"]
+bg_color = Color(1, 1, 1, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3j8lq"]
 corner_radius_top_left = 16
@@ -13,17 +13,17 @@ corner_radius_bottom_left = 16
 shadow_size = 5
 shadow_offset = Vector2(0, 3)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7ywqe"]
-bg_color = Color(1, 1, 1, 1)
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tdv2v"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nlly2"]
+bg_color = Color(0.882164, 0.873986, 0.881244, 0.462745)
+shadow_size = 5
+shadow_offset = Vector2(0, 3)
 
 [node name="Control" type="Control"]
 layout_mode = 3
-anchor_left = 0.020000001
-anchor_top = 0.08400001
-anchor_right = 0.11400001
-anchor_bottom = 0.18100001
+anchor_left = 0.02
+anchor_top = 0.084
+anchor_right = 0.114
+anchor_bottom = 0.181
 offset_left = 745.6
 offset_top = 416.28
 offset_right = 745.12
@@ -42,68 +42,66 @@ offset_right = 170.0
 offset_bottom = 108.0
 theme_override_constants/separation = 4
 
-[node name="Start" type="Button" parent="VBoxContainer"]
-modulate = Color(0.36293122, 1.1801987, 1.1801987, 1)
+[node name="VFX" type="Button" parent="VBoxContainer"]
+modulate = Color(0.362931, 1.1802, 1.1802, 1)
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
-size_flags_vertical = 4
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 15
-theme_override_styles/normal = SubResource("StyleBoxFlat_nlly2")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_3j8lq")
-theme_override_styles/hover = SubResource("StyleBoxFlat_7ywqe")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_tdv2v")
-text = "SFX"
-alignment = 0
-
-[node name="Label" type="Label" parent="VBoxContainer/Start"]
-layout_mode = 0
-offset_left = 77.0
-offset_top = 12.0
-offset_right = 117.0
-offset_bottom = 35.0
-text = "On"
-
-[node name="Panel" type="Panel" parent="VBoxContainer/Start/Label"]
-layout_mode = 0
-offset_left = -2.0
-offset_top = -1.0
-offset_right = 25.0
-offset_bottom = 23.0
-
-[node name="Start3" type="Button" parent="VBoxContainer"]
-modulate = Color(0.36293122, 1.1801987, 1.1801987, 1)
-custom_minimum_size = Vector2(0, 40)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 15
-theme_override_styles/normal = SubResource("StyleBoxFlat_nlly2")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_3j8lq")
 theme_override_styles/hover = SubResource("StyleBoxFlat_7ywqe")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_tdv2v")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3j8lq")
+theme_override_styles/normal = SubResource("StyleBoxFlat_nlly2")
 text = "VFX"
 alignment = 0
 
-[node name="Label2" type="Label" parent="VBoxContainer/Start3"]
-layout_mode = 0
-offset_left = 74.0
+[node name="Panel2" type="Panel" parent="VBoxContainer/VFX"]
+offset_left = 96.0
 offset_top = 10.0
-offset_right = 100.0
-offset_bottom = 33.0
+offset_right = 127.0
+offset_bottom = 36.0
+
+[node name="Label2" type="Label" parent="VBoxContainer/VFX/Panel2"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 2.0
+offset_right = 29.0
+offset_bottom = 25.0
 text = "On"
 
-[node name="Panel2" type="Panel" parent="VBoxContainer/Start3/Label2"]
+[node name="SFX" type="Button" parent="VBoxContainer"]
+modulate = Color(0.362931, 1.1802, 1.1802, 1)
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 15
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tdv2v")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7ywqe")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3j8lq")
+theme_override_styles/normal = SubResource("StyleBoxFlat_nlly2")
+text = "SFX"
+alignment = 0
+
+[node name="Panel" type="Panel" parent="VBoxContainer/SFX"]
 layout_mode = 0
-offset_left = -1.0
-offset_top = -1.0
+offset_left = 98.0
+offset_top = 12.0
+offset_right = 125.0
+offset_bottom = 36.0
+
+[node name="Label" type="Label" parent="VBoxContainer/SFX/Panel"]
+layout_mode = 2
 offset_right = 26.0
 offset_bottom = 23.0
+text = "On"
+horizontal_alignment = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(116, 34)
