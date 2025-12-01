@@ -4,7 +4,7 @@ using System;
 public partial class BasicEnemy: CharacterBody2D
 {
     //The enemy variables
-    public int Speed = 100; 
+    public int Speed = 50; 
     private CharacterBody2D Player;
     public int currentHealth = 110;
     public int damage = 20;
@@ -76,11 +76,7 @@ public partial class BasicEnemy: CharacterBody2D
 
         
     }
-    public void PlayerOut(Node2D node)
-    {
-
-    }
-
+    
 }
 
  

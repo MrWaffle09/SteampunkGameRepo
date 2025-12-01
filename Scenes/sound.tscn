@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" uid="uid://d02wn6m2or3dp" path="res://Scripts/Sound.cs" id="1_djale"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nlly2"]
-bg_color = Color(0.882164, 0.873986, 0.881244, 0.462745)
-shadow_size = 5
-shadow_offset = Vector2(0, 3)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tdv2v"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7ywqe"]
+bg_color = Color(1, 1, 1, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3j8lq"]
 corner_radius_top_left = 16
@@ -15,10 +15,10 @@ corner_radius_bottom_left = 16
 shadow_size = 5
 shadow_offset = Vector2(0, 3)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7ywqe"]
-bg_color = Color(1, 1, 1, 1)
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tdv2v"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nlly2"]
+bg_color = Color(0.882164, 0.873986, 0.881244, 0.462745)
+shadow_size = 5
+shadow_offset = Vector2(0, 3)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -80,15 +80,15 @@ theme_override_constants/separation = 15
 custom_minimum_size = Vector2(10, 20)
 layout_mode = 2
 size_flags_horizontal = 8
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 10
-theme_override_styles/normal = SubResource("StyleBoxFlat_nlly2")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_3j8lq")
-theme_override_styles/hover = SubResource("StyleBoxFlat_7ywqe")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_tdv2v")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7ywqe")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3j8lq")
+theme_override_styles/normal = SubResource("StyleBoxFlat_nlly2")
 text = "On"
 alignment = 0
 
@@ -97,15 +97,15 @@ custom_minimum_size = Vector2(10, 20)
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 10
-theme_override_styles/normal = SubResource("StyleBoxFlat_nlly2")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_3j8lq")
-theme_override_styles/hover = SubResource("StyleBoxFlat_7ywqe")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_tdv2v")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7ywqe")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3j8lq")
+theme_override_styles/normal = SubResource("StyleBoxFlat_nlly2")
 text = "Off"
 alignment = 0
 
@@ -121,15 +121,15 @@ offset_top = 87.0
 offset_right = 155.0
 offset_bottom = 107.0
 size_flags_horizontal = 8
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 10
-theme_override_styles/normal = SubResource("StyleBoxFlat_nlly2")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_3j8lq")
-theme_override_styles/hover = SubResource("StyleBoxFlat_7ywqe")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_tdv2v")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7ywqe")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3j8lq")
+theme_override_styles/normal = SubResource("StyleBoxFlat_nlly2")
 text = "Back"
 
 [connection signal="pressed" from="VFX2" to="." method="OnButtonPressed"]

@@ -1,13 +1,13 @@
 [gd_scene load_steps=19 format=3 uid="uid://bv6m2d612dkjw"]
 
 [ext_resource type="Script" uid="uid://ohkgkdg33gjl" path="res://Scripts/BasicEnemy.cs" id="1_6x443"]
-[ext_resource type="Texture2D" uid="uid://bj23uqblwrccn" path="res://icon.png" id="2_b7xc3"]
-[ext_resource type="Texture2D" uid="uid://bb3fec2ybbu53" path="res://Assets/enemy/Steampunk HP Bar - Version 2 (F).png" id="4_lc4gu"]
-[ext_resource type="Texture2D" uid="uid://bhu2bdfpq5yju" path="res://Assets/enemy/Steampunk HP Bar - Version 2 (E).png" id="5_6do23"]
-[ext_resource type="Texture2D" uid="uid://b8b722ah0co6j" path="res://Assets/enemy/Steampunk HP Bar - Version 2 (D).png" id="6_f300b"]
-[ext_resource type="Texture2D" uid="uid://dgmnofiptpc1k" path="res://Assets/enemy/Steampunk HP Bar - Version 2 (C).png" id="7_gouef"]
-[ext_resource type="Texture2D" uid="uid://ugyvw0gc6cru" path="res://Assets/enemy/Steampunk HP Bar - Version 2 (B).png" id="8_tfhvj"]
-[ext_resource type="Texture2D" uid="uid://ddbjyns7tr76k" path="res://Assets/enemy/Steampunk HP Bar - Version 2 (A).png" id="9_hjsaa"]
+[ext_resource type="Texture2D" uid="uid://0a752a2s0vjm" path="res://icon.png" id="2_b7xc3"]
+[ext_resource type="Texture2D" uid="uid://dyw05vyufk4vw" path="res://Assets/enemy/Steampunk HP Bar - Version 2 (F).png" id="4_lc4gu"]
+[ext_resource type="Texture2D" uid="uid://coytoeck66ksl" path="res://Assets/enemy/Steampunk HP Bar - Version 2 (E).png" id="5_6do23"]
+[ext_resource type="Texture2D" uid="uid://i3lb76swq10p" path="res://Assets/enemy/Steampunk HP Bar - Version 2 (D).png" id="6_f300b"]
+[ext_resource type="Texture2D" uid="uid://d1t7tgwtobi55" path="res://Assets/enemy/Steampunk HP Bar - Version 2 (C).png" id="7_gouef"]
+[ext_resource type="Texture2D" uid="uid://cku14tyw4s87o" path="res://Assets/enemy/Steampunk HP Bar - Version 2 (B).png" id="8_tfhvj"]
+[ext_resource type="Texture2D" uid="uid://v7g3anfaneps" path="res://Assets/enemy/Steampunk HP Bar - Version 2 (A).png" id="9_hjsaa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hp7c0"]
 size = Vector2(35, 37)
@@ -109,9 +109,9 @@ texture = ExtResource("2_b7xc3")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-light_mask = 2
 position = Vector2(-5, -6)
 shape = SubResource("CircleShape2D_g722j")
+debug_color = Color(0.199957, 0.606385, 0.585077, 0.42)
 
 [node name="Damage(area2D)" type="Area2D" parent="."]
 
@@ -121,8 +121,8 @@ shape = SubResource("RectangleShape2D_b7xc3")
 debug_color = Color(0.824877, 0.331957, 0.576088, 0.419608)
 
 [node name="health" type="AnimatedSprite2D" parent="."]
-position = Vector2(1.500001, 22)
-scale = Vector2(0.34259263, 0.3)
+position = Vector2(1.5, 22)
+scale = Vector2(0.342593, 0.3)
 sprite_frames = SubResource("SpriteFrames_pyyvu")
 animation = &"1_hp"
 autoplay = "6_hp"
