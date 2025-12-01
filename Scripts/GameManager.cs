@@ -12,7 +12,7 @@ public partial class GameManager : Node
 
     public static List<string> activeCharacters = new List<string>();
     
-    var Microwave 
+
     
     public enum StatusConditions
     {
