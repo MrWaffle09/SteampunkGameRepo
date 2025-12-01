@@ -1,7 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://bv6m2d612dkjw"]
+[gd_scene load_steps=19 format=3 uid="uid://bv6m2d612dkjw"]
 
 [ext_resource type="Script" uid="uid://ohkgkdg33gjl" path="res://Scripts/BasicEnemy.cs" id="1_6x443"]
-[ext_resource type="Texture2D" uid="uid://0a752a2s0vjm" path="res://icon.png" id="2_b7xc3"]
+[ext_resource type="Texture2D" uid="uid://bj23uqblwrccn" path="res://icon.png" id="2_b7xc3"]
+[ext_resource type="Texture2D" uid="uid://bb3fec2ybbu53" path="res://Assets/enemy/Steampunk HP Bar - Version 2 (F).png" id="4_lc4gu"]
+[ext_resource type="Texture2D" uid="uid://bhu2bdfpq5yju" path="res://Assets/enemy/Steampunk HP Bar - Version 2 (E).png" id="5_6do23"]
+[ext_resource type="Texture2D" uid="uid://b8b722ah0co6j" path="res://Assets/enemy/Steampunk HP Bar - Version 2 (D).png" id="6_f300b"]
+[ext_resource type="Texture2D" uid="uid://dgmnofiptpc1k" path="res://Assets/enemy/Steampunk HP Bar - Version 2 (C).png" id="7_gouef"]
+[ext_resource type="Texture2D" uid="uid://ugyvw0gc6cru" path="res://Assets/enemy/Steampunk HP Bar - Version 2 (B).png" id="8_tfhvj"]
+[ext_resource type="Texture2D" uid="uid://ddbjyns7tr76k" path="res://Assets/enemy/Steampunk HP Bar - Version 2 (A).png" id="9_hjsaa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hp7c0"]
 size = Vector2(35, 37)
@@ -10,12 +16,88 @@ size = Vector2(35, 37)
 radius = 128.016
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b7xc3"]
-size = Vector2(38, 38)
+size = Vector2(38, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pb8ye"]
+atlas = ExtResource("4_lc4gu")
+region = Rect2(0, 0, 108, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dx5ad"]
+atlas = ExtResource("5_6do23")
+region = Rect2(0, 0, 108, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ydwe1"]
+atlas = ExtResource("6_f300b")
+region = Rect2(0, 0, 108, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_elv4g"]
+atlas = ExtResource("7_gouef")
+region = Rect2(0, 0, 108, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1jhq0"]
+atlas = ExtResource("8_tfhvj")
+region = Rect2(0, 0, 108, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f1c30"]
+atlas = ExtResource("9_hjsaa")
+region = Rect2(0, 0, 108, 44)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pyyvu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pb8ye")
+}],
+"loop": true,
+"name": &"1_hp",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dx5ad")
+}],
+"loop": true,
+"name": &"2_hp",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ydwe1")
+}],
+"loop": true,
+"name": &"3_hp",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_elv4g")
+}],
+"loop": true,
+"name": &"4_hp",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1jhq0")
+}],
+"loop": true,
+"name": &"5_hp",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f1c30")
+}],
+"loop": true,
+"name": &"6_hp",
+"speed": 5.0
+}]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_6x443")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 2
 position = Vector2(2.5, -2.5)
 shape = SubResource("RectangleShape2D_hp7c0")
 
@@ -34,10 +116,18 @@ shape = SubResource("CircleShape2D_g722j")
 [node name="Damage(area2D)" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Damage(area2D)"]
-position = Vector2(2, -2)
+position = Vector2(2, -2.5)
 shape = SubResource("RectangleShape2D_b7xc3")
 debug_color = Color(0.824877, 0.331957, 0.576088, 0.419608)
+
+[node name="health" type="AnimatedSprite2D" parent="."]
+position = Vector2(1.500001, 22)
+scale = Vector2(0.34259263, 0.3)
+sprite_frames = SubResource("SpriteFrames_pyyvu")
+animation = &"1_hp"
+autoplay = "6_hp"
 
 [connection signal="body_entered" from="Area2D" to="." method="OnPlayerEntered"]
 [connection signal="body_exited" from="Area2D" to="." method="OnPlayerOut"]
 [connection signal="body_entered" from="Damage(area2D)" to="." method="BodyEntered"]
+[connection signal="body_exited" from="Damage(area2D)" to="." method="PlayerOut"]

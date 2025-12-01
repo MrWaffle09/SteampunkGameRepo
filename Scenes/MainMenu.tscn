@@ -1,32 +1,30 @@
 [gd_scene load_steps=9 format=3 uid="uid://btmtg1efygx0g"]
 
 [ext_resource type="Script" uid="uid://ce0py0uk6yc04" path="res://Scripts/MainMenu.cs" id="1_853f1"]
-[ext_resource type="Texture2D" uid="uid://0a752a2s0vjm" path="res://icon.png" id="1_tt5f1"]
+[ext_resource type="Texture2D" uid="uid://cu1im3oeiivyf" path="res://Assets/mainmenu/orig.png" id="2_xim88"]
+[ext_resource type="Texture2D" uid="uid://tlnspu7mymx2" path="res://Assets/mainmenu/6.png" id="3_koqhg"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_853f1"]
-texture = ExtResource("1_tt5f1")
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8saeu"]
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bnhvo"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_853f1"]
+border_blend = true
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tt5f1"]
 bg_color = Color(1, 1, 1, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_853f1"]
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-shadow_size = 5
-shadow_offset = Vector2(0, 3)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8saeu"]
-bg_color = Color(0.6, 0.439216, 1, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-shadow_size = 5
-shadow_offset = Vector2(0, 3)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bnhvo"]
 
 [sub_resource type="SystemFont" id="SystemFont_853f1"]
 font_italic = true
@@ -36,6 +34,8 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 3.0
+offset_bottom = -13.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_853f1")
@@ -46,9 +46,27 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -9.0
+offset_right = -4.0
+offset_bottom = -9.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_853f1")
+
+[node name="PanelContainer" type="PanelContainer" parent="Panel"]
+layout_mode = 0
+offset_right = 1918.0
+offset_bottom = 1082.0
+
+[node name="Orig" type="Sprite2D" parent="Panel"]
+position = Vector2(964.00006, 541)
+scale = Vector2(3.3246534, 3.308642)
+texture = ExtResource("2_xim88")
+
+[node name="6" type="Sprite2D" parent="Panel/Orig"]
+position = Vector2(-224.53467, -95.50745)
+scale = Vector2(0.3007832, 0.30223876)
+texture = ExtResource("3_koqhg")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 custom_minimum_size = Vector2(0, 20)
@@ -70,30 +88,31 @@ theme_override_constants/separation = 10
 modulate = Color(0.301961, 1, 1, 1)
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
-theme_override_styles/focus = SubResource("StyleBoxEmpty_bnhvo")
-theme_override_styles/hover = SubResource("StyleBoxFlat_tt5f1")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_853f1")
 theme_override_styles/normal = SubResource("StyleBoxFlat_8saeu")
-text = "Start"
+theme_override_styles/pressed = SubResource("StyleBoxFlat_853f1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tt5f1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bnhvo")
+text = "PLay"
+icon_alignment = 1
 
 [node name="Sound" type="Button" parent="VBoxContainer"]
 modulate = Color(0.301961, 1, 1, 1)
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
-theme_override_styles/focus = SubResource("StyleBoxEmpty_bnhvo")
-theme_override_styles/hover = SubResource("StyleBoxFlat_tt5f1")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_853f1")
 theme_override_styles/normal = SubResource("StyleBoxFlat_8saeu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_853f1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tt5f1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bnhvo")
 text = "Sound"
 
 [node name="Label" type="Label" parent="."]
@@ -109,8 +128,6 @@ grow_horizontal = 2
 theme_override_fonts/font = SubResource("SystemFont_853f1")
 theme_override_font_sizes/font_size = 50
 text = "The best game"
-
-[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="OnPressed"]
 [connection signal="pressed" from="VBoxContainer/Sound" to="." method="SoundPressed"]

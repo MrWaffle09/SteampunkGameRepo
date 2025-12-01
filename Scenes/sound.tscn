@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://v63l6ry17pdb"]
+[gd_scene load_steps=6 format=3 uid="uid://v63l6ry17pdb"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tdv2v"]
+[ext_resource type="Script" uid="uid://d02wn6m2or3dp" path="res://Scripts/Sound.cs" id="1_djale"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7ywqe"]
-bg_color = Color(1, 1, 1, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nlly2"]
+bg_color = Color(0.882164, 0.873986, 0.881244, 0.462745)
+shadow_size = 5
+shadow_offset = Vector2(0, 3)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3j8lq"]
 corner_radius_top_left = 16
@@ -13,10 +15,10 @@ corner_radius_bottom_left = 16
 shadow_size = 5
 shadow_offset = Vector2(0, 3)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nlly2"]
-bg_color = Color(0.882164, 0.873986, 0.881244, 0.462745)
-shadow_size = 5
-shadow_offset = Vector2(0, 3)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7ywqe"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tdv2v"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -28,81 +30,106 @@ offset_left = 745.6
 offset_top = 416.28
 offset_right = 745.12
 offset_bottom = 416.52
+script = ExtResource("1_djale")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
-offset_right = 183.0
-offset_bottom = 106.0
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 179.0
+offset_bottom = 120.0
+
+[node name="Panel2" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 19.0
+offset_right = 176.0
+offset_bottom = 45.0
+
+[node name="Label2" type="Label" parent="Panel/Panel2"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 1.0
+offset_right = 31.0
+offset_bottom = 24.0
+text = "SFX"
+
+[node name="Panel" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 54.0
+offset_right = 176.0
+offset_bottom = 76.0
+
+[node name="Label" type="Label" parent="Panel/Panel"]
+layout_mode = 0
+offset_right = 26.0
+offset_bottom = 23.0
+text = "VFX"
+horizontal_alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 12.0
-offset_top = 8.0
-offset_right = 170.0
-offset_bottom = 108.0
-theme_override_constants/separation = 4
+offset_left = 149.0
+offset_top = 16.0
+offset_right = 165.0
+offset_bottom = 72.0
+theme_override_constants/separation = 15
 
 [node name="VFX" type="Button" parent="VBoxContainer"]
-modulate = Color(0.362931, 1.1802, 1.1802, 1)
-custom_minimum_size = Vector2(0, 40)
+custom_minimum_size = Vector2(10, 20)
 layout_mode = 2
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+size_flags_horizontal = 8
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 15
-theme_override_styles/focus = SubResource("StyleBoxEmpty_tdv2v")
-theme_override_styles/hover = SubResource("StyleBoxFlat_7ywqe")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_3j8lq")
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
 theme_override_styles/normal = SubResource("StyleBoxFlat_nlly2")
-text = "VFX"
-alignment = 0
-
-[node name="Panel2" type="Panel" parent="VBoxContainer/VFX"]
-offset_left = 96.0
-offset_top = 10.0
-offset_right = 127.0
-offset_bottom = 36.0
-
-[node name="Label2" type="Label" parent="VBoxContainer/VFX/Panel2"]
-layout_mode = 0
-offset_left = 3.0
-offset_top = 2.0
-offset_right = 29.0
-offset_bottom = 25.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3j8lq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7ywqe")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tdv2v")
 text = "On"
+alignment = 0
 
 [node name="SFX" type="Button" parent="VBoxContainer"]
-modulate = Color(0.362931, 1.1802, 1.1802, 1)
-custom_minimum_size = Vector2(0, 40)
+custom_minimum_size = Vector2(10, 20)
 layout_mode = 2
+size_flags_horizontal = 8
 size_flags_vertical = 4
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 15
-theme_override_styles/focus = SubResource("StyleBoxEmpty_tdv2v")
-theme_override_styles/hover = SubResource("StyleBoxFlat_7ywqe")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_3j8lq")
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
 theme_override_styles/normal = SubResource("StyleBoxFlat_nlly2")
-text = "SFX"
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3j8lq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7ywqe")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tdv2v")
+text = "Off"
 alignment = 0
-
-[node name="Panel" type="Panel" parent="VBoxContainer/SFX"]
-layout_mode = 0
-offset_left = 98.0
-offset_top = 12.0
-offset_right = 125.0
-offset_bottom = 36.0
-
-[node name="Label" type="Label" parent="VBoxContainer/SFX/Panel"]
-layout_mode = 2
-offset_right = 26.0
-offset_bottom = 23.0
-text = "On"
-horizontal_alignment = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(116, 34)
 zoom = Vector2(2, 2)
+
+[node name="VFX2" type="Button" parent="."]
+custom_minimum_size = Vector2(10, 20)
+layout_mode = 0
+offset_left = 30.0
+offset_top = 87.0
+offset_right = 155.0
+offset_bottom = 107.0
+size_flags_horizontal = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_nlly2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3j8lq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7ywqe")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tdv2v")
+text = "Back"
+
+[connection signal="pressed" from="VFX2" to="." method="OnButtonPressed"]
