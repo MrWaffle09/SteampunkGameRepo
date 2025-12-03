@@ -13,15 +13,15 @@ mana energy bar character selelector steampunk and elementary students
 
 # OOP
 
-There is a abstract class and a child class. If you're looking to find them, go to the player scripts where you will find it under PlayerCS.
-THere is one private class in our player script.
-We have Instantiate because we have multiple scenes.
-Our code contains a Enum. I'm not sure where.
+### There is a abstract class and a child class. If you're looking to find them, go to the player scripts where you will find it under PlayerCS.
+### THere is one private class in our player script.
+### We have Instantiate because we have multiple scenes.
+### Our code contains a Enum. I'm not sure where.
 
 # Everyones Part in the Project
 
-Everyone is pulling their weight on parts of the game that they have the most strength in.
+### Everyone is pulling their weight on parts of the game that they have the most strength in.
 
 # Files
 
-Files access is granted to the teacher and all tilemaps and other assets can be found.
+### Files access is granted to the teacher and all tilemaps and other assets can be found.
