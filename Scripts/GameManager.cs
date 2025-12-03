@@ -8,7 +8,16 @@ public partial class GameManager : Node
     public static int CapyID = 0;
     public static int MechID = 0;  
     public static int MicroID = 0;
-    public static int BullID = 0;
+
+    public static int BullID
+    {
+        get => BullID;
+        set
+        {
+            BullID = value;
+            GD.Print(BullID);
+        }
+    }
 
     public static List<string> activeCharacters = new List<string>();
     

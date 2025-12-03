@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using MultiplayerProject.Scripts;
 
 public partial class ExampleLevel : Node2D
 {
@@ -7,14 +8,38 @@ public partial class ExampleLevel : Node2D
     public PackedScene Bulldozer = GD.Load<PackedScene>("res://Scenes/bulldozer.tscn");
     public PackedScene Mechanic = GD.Load<PackedScene>("res://Scenes/mechanic.tscn");
     public PackedScene Capybara = GD.Load<PackedScene>("res://Scenes/capybara.tscn");
-    
+
     public override void _Ready()
     {
-        GD.Print(GameManager.activeCharacters);
-        if (GameManager.activeCharacters.Contains("Micro"));
+        if (GameManager.activeCharacters.Contains("Micro"))
         {
-            var currentMicrowave = Microwave;
-            currentMicrowave.Instantiate<CharacterBody2D>();
+            var currentMicrowave = Microwave.Instantiate<Player>();
+            AddChild(currentMicrowave);
+            currentMicrowave.ID = GameManager.MicroID;
+            GD.Print(GameManager.MicroID);
+            GD.Print(currentMicrowave.ID);
+        }
+
+        if (GameManager.activeCharacters.Contains("Mech"))
+        {
+            var currentMechanic = Mechanic.Instantiate<Player>();
+            AddChild(currentMechanic);
+            currentMechanic.ID = GameManager.MechID;
+        }
+
+        if (GameManager.activeCharacters.Contains("Capy"))
+        {
+            var currentCapybara = Capybara.Instantiate<Player>();
+            AddChild(currentCapybara);
+            currentCapybara.ID = GameManager.CapyID;
+        }
+
+        if (GameManager.activeCharacters.Contains("Bull"))
+        {
+            var currentBulldozer = Bulldozer.Instantiate<Player>();
+            AddChild(currentBulldozer);
+            currentBulldozer.ID = GameManager.BullID;
+            GD.Print(GameManager.BullID);
         }
     }
 }
