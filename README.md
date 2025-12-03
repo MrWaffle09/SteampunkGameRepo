@@ -9,3 +9,9 @@ mana energy bar character selelector steampunk and elementary students
 
 # Instructions on how to test each of the chosen features and where to find the related scenes and scripts for each feature
 /For example, if you wanted to find the Steampunk element, you would go to the tile map branch to find that. Thats where it presents the Steampunk theme texture and feeling of the game. You can also find our steampunk assets in the folder. The elemantary students element is really able to be found, its everywhere. When running the game, it suppose to feel simple and easy to play and fun to the eye. So behind the game and the scripts, its a little bit of a mess but they don't see that. You can also find Energy bar in it's branch. It has it's own branch where you can find it asset and the code make it work properly.
+
+
+# OOP
+
+There is a abstract class and a child class.
+THere is one private class in our player script.
