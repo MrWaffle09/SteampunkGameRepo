@@ -1,6 +1,7 @@
 using Godot;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 
 public partial class CharacterSelector : Node2D
@@ -53,7 +54,7 @@ public partial class CharacterSelector : Node2D
                     MechCanSelect = false;
                     _mechText.Text = "Selected";
                     UsedIDs.Add(@event.Device);
-                    GameManager.activeCharacters.Add("Mech");   
+                    GameManager.activeCharacters.Add("Mech"); ;
                 }
             }
         }
@@ -68,7 +69,7 @@ public partial class CharacterSelector : Node2D
                     MicroCanSelect = false;
                     _microText.Text = "Selected";
                     UsedIDs.Add(@event.Device);
-                    GameManager.activeCharacters.Add("Micro");
+                    GameManager.activeCharacters.Add("Micro"); ;
                 }
             }
         }
@@ -83,13 +84,17 @@ public partial class CharacterSelector : Node2D
                     BullCanSelect = false;
                     _bullText.Text = "Selected";
                     UsedIDs.Add(@event.Device);
-                    GameManager.activeCharacters.Add("Bull");
+                    GameManager.activeCharacters.Add("Bull"); ;
                 }
             }
         }
 
         if (@event.IsActionPressed("Pause"))
         {
+            foreach (string item in GameManager.activeCharacters)
+            {
+                GD.Print(item);
+            }
             GetTree().ChangeSceneToFile("res://Scenes/ExampleLevel.tscn");
         }
     }
