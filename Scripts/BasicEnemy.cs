@@ -76,6 +76,10 @@ public partial class BasicEnemy: CharacterBody2D
 
         
     }
+    public void PlayerOut(Node2D node)
+    {
+       Velocity = Vector2.Zero; 
+    }
     
 }
 
