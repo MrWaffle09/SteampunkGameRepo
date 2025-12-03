@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://bk6qvtkenikmu"]
+[gd_scene load_steps=42 format=3 uid="uid://bk6qvtkenikmu"]
 
 [ext_resource type="Texture2D" uid="uid://cuont25at5s7u" path="res://Assets/Bulldozer/Bulldozer/Parry.png" id="1_bw2s7"]
 [ext_resource type="Script" uid="uid://dexm1amuqdkin" path="res://Scripts/Bulldozer.cs" id="1_flffy"]
@@ -254,12 +254,18 @@ animations = [{
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bw2s7"]
 radius = 9.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hqyu7"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8uw2f"]
+bg_color = Color(0.03447779, 0.40867537, 0.76475036, 1)
+
 [node name="Bulldozer" type="CharacterBody2D"]
 modulate = Color(0.980392, 0.419608, 0, 1)
 script = ExtResource("1_flffy")
 
 [node name="AnimatableBody2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -24)
+position = Vector2(2, -14)
 sprite_frames = SubResource("SpriteFrames_rp6fr")
 animation = &"idle"
 autoplay = "idle"
@@ -267,6 +273,21 @@ frame_progress = 0.951211
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 light_mask = 3
-position = Vector2(0, -11)
+position = Vector2(2, -2)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_bw2s7")
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+offset_left = -31.0
+offset_top = -39.0
+offset_right = 40.0
+offset_bottom = -27.0
+theme_override_styles/background = SubResource("StyleBoxFlat_hqyu7")
+theme_override_styles/fill = SubResource("StyleBoxFlat_8uw2f")
+value = 100.0
+exp_edit = true
+rounded = true
+allow_greater = true
+allow_lesser = true
+
+[connection signal="child_entered_tree" from="CollisionShape2D" to="." method="OnEnemyEntered"]
