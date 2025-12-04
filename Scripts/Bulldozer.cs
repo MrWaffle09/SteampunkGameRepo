@@ -11,7 +11,7 @@ public partial class Bulldozer : Player
 
     public override void _Ready()
     {
-        healthBar = GetNode<ProgressBar>("HealthBar");
+        healthBar = GetNode<ProgressBar>("healthBar");
         healthBar.MaxValue = MaxHealth;
         healthBar.Value = CurrentHealth;
     }

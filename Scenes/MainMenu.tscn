@@ -1,17 +1,14 @@
 [gd_scene load_steps=10 format=3 uid="uid://btmtg1efygx0g"]
 
 [ext_resource type="Script" uid="uid://ce0py0uk6yc04" path="res://Scripts/MainMenu.cs" id="1_853f1"]
-[ext_resource type="Texture2D" uid="uid://cu1im3oeiivyf" path="res://Assets/mainmenu/orig.png" id="2_xim88"]
-[ext_resource type="Texture2D" uid="uid://tlnspu7mymx2" path="res://Assets/mainmenu/6.png" id="3_koqhg"]
-[ext_resource type="Script" uid="uid://4c6ipbid7epy" path="res://Scenes/Start.cs" id="4_ghw46"]
+[ext_resource type="Texture2D" uid="uid://bi38urjt6acyf" path="res://Assets/mainmenu/orig.png" id="2_xim88"]
+[ext_resource type="Texture2D" uid="uid://137pksm67thw" path="res://Assets/mainmenu/6.png" id="3_koqhg"]
+[ext_resource type="Texture2D" uid="uid://dlobgfdjehwyr" path="res://Assets/mainmenu/A.png" id="5_8um5k"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8saeu"]
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-shadow_size = 5
-shadow_offset = Vector2(0, 3)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bnhvo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tt5f1"]
+bg_color = Color(1, 1, 1, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_853f1"]
 border_blend = true
@@ -22,10 +19,13 @@ corner_radius_bottom_left = 16
 shadow_size = 5
 shadow_offset = Vector2(0, 3)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tt5f1"]
-bg_color = Color(1, 1, 1, 1)
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bnhvo"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8saeu"]
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3)
 
 [sub_resource type="SystemFont" id="SystemFont_853f1"]
 font_italic = true
@@ -89,32 +89,33 @@ theme_override_constants/separation = 10
 modulate = Color(0.301961, 1, 1, 1)
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0.8, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.768627, 0.145098, 0.505882, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
-theme_override_styles/normal = SubResource("StyleBoxFlat_8saeu")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_853f1")
-theme_override_styles/hover = SubResource("StyleBoxFlat_tt5f1")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_bnhvo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tt5f1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_853f1")
+theme_override_styles/normal = SubResource("StyleBoxFlat_8saeu")
 text = "PLay"
 icon_alignment = 1
-script = ExtResource("4_ghw46")
 
 [node name="Sound" type="Button" parent="VBoxContainer"]
 modulate = Color(0.301961, 1, 1, 1)
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.768627, 0.145098, 0.505882, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
-theme_override_styles/normal = SubResource("StyleBoxFlat_8saeu")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_853f1")
-theme_override_styles/hover = SubResource("StyleBoxFlat_tt5f1")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_bnhvo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tt5f1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_853f1")
+theme_override_styles/normal = SubResource("StyleBoxFlat_8saeu")
 text = "Sound"
 
 [node name="Label" type="Label" parent="."]
@@ -130,6 +131,20 @@ grow_horizontal = 2
 theme_override_fonts/font = SubResource("SystemFont_853f1")
 theme_override_font_sizes/font_size = 50
 text = "The best game"
+
+[node name="A" type="Sprite2D" parent="."]
+position = Vector2(1539, 454)
+scale = Vector2(1.375, 1.375)
+texture = ExtResource("5_8um5k")
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1445.0
+offset_top = 431.0
+offset_right = 1660.0
+offset_bottom = 473.0
+theme_override_font_sizes/font_size = 30
+text = "Press    to select"
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="OnPressed"]
 [connection signal="pressed" from="VBoxContainer/Sound" to="." method="SoundPressed"]
