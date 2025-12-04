@@ -16,8 +16,6 @@ public partial class ExampleLevel : Node2D
             var currentMicrowave = Microwave.Instantiate<Player>();
             AddChild(currentMicrowave);
             currentMicrowave.ID = GameManager.MicroID;
-            GD.Print(GameManager.MicroID);
-            GD.Print(currentMicrowave.ID);
         }
 
         if (GameManager.activeCharacters.Contains("Mech"))
@@ -40,6 +38,7 @@ public partial class ExampleLevel : Node2D
             AddChild(currentBulldozer);
             currentBulldozer.ID = GameManager.BullID;
             GD.Print(GameManager.BullID);
+            GD.Print(currentBulldozer.ID);
         }
     }
 }

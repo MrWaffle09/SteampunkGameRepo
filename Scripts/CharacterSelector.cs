@@ -84,7 +84,7 @@ public partial class CharacterSelector : Node2D
                     BullCanSelect = false;
                     _bullText.Text = "Selected";
                     UsedIDs.Add(@event.Device);
-                    GameManager.activeCharacters.Add("Bull"); ;
+                    GameManager.activeCharacters.Add("Bull"); 
                 }
             }
         }
