@@ -7,7 +7,7 @@ public partial class MainMenu : Control
 {
 
     public void OnPressed() {
-         GetTree().ChangeSceneToFile("res://Scenes/ExampleLevel.tscn");
+         GetTree().ChangeSceneToFile("res://Scenes/character_selector.tscn");
          GD.Print("Play pressed.");
     }
     public void OnSettingsPressed() {
