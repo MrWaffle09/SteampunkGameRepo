@@ -15,18 +15,16 @@ public partial class GameManager : Node
     
 
     
-    public enum StatusConditions
+    public enum PowerUps
     {
-        Stopped = 0,
-        Stunned = 50,
-        MNormal = 100,
-        BNormal = 200,
-        McNormal = 75,
-        Dash = 300,
-        Boost = 400,
-        
-    }
-    
-    
-    
+ ,
+
+    private int Speed1 = 50;
+    private int Speed2 = 100;
+    private int Speed3 = 150;
+
+}
+
+
+
 }
