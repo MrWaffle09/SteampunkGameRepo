@@ -1,12 +1,12 @@
 [gd_scene load_steps=42 format=3 uid="uid://bk6qvtkenikmu"]
 
-[ext_resource type="Texture2D" uid="uid://7aqniprg40yb" path="res://Assets/Bulldozer/Bulldozer/Parry.png" id="1_bw2s7"]
+[ext_resource type="Texture2D" uid="uid://cuont25at5s7u" path="res://Assets/Bulldozer/Bulldozer/Parry.png" id="1_bw2s7"]
 [ext_resource type="Script" uid="uid://dexm1amuqdkin" path="res://Scripts/Bulldozer.cs" id="1_flffy"]
-[ext_resource type="Texture2D" uid="uid://dc603dwnh1yx4" path="res://Assets/Bulldozer/Bulldozer/Attack.png" id="2_flffy"]
-[ext_resource type="Texture2D" uid="uid://dcf6d4qlevsxf" path="res://Assets/Bulldozer/Bulldozer/Death.png" id="3_hqyu7"]
-[ext_resource type="Texture2D" uid="uid://dd1b3n8i7s0ij" path="res://Assets/Bulldozer/Bulldozer/Hit.png" id="4_8uw2f"]
-[ext_resource type="Texture2D" uid="uid://b8ijp37rgqiye" path="res://Assets/Bulldozer/Bulldozer/Idle.png" id="5_nlsev"]
-[ext_resource type="Texture2D" uid="uid://cfptv0f34v3la" path="res://Assets/Bulldozer/Bulldozer/Walk.png" id="6_atdbl"]
+[ext_resource type="Texture2D" uid="uid://cljednd4xw02m" path="res://Assets/Bulldozer/Bulldozer/Attack.png" id="2_flffy"]
+[ext_resource type="Texture2D" uid="uid://dk4ilvhrlqjj0" path="res://Assets/Bulldozer/Bulldozer/Death.png" id="3_hqyu7"]
+[ext_resource type="Texture2D" uid="uid://dqtu6bnqsv75" path="res://Assets/Bulldozer/Bulldozer/Hit.png" id="4_8uw2f"]
+[ext_resource type="Texture2D" uid="uid://cvoggk73k0i7i" path="res://Assets/Bulldozer/Bulldozer/Idle.png" id="5_nlsev"]
+[ext_resource type="Texture2D" uid="uid://vfcx5o01s26r" path="res://Assets/Bulldozer/Bulldozer/Walk.png" id="6_atdbl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oonca"]
 atlas = ExtResource("1_bw2s7")
@@ -285,10 +285,7 @@ offset_right = 40.0
 offset_bottom = -16.0
 theme_override_styles/background = SubResource("StyleBoxFlat_hqyu7")
 theme_override_styles/fill = SubResource("StyleBoxFlat_8uw2f")
-step = 20.0
 value = 100.0
-rounded = true
-allow_greater = true
-allow_lesser = true
+show_percentage = false
 
 [connection signal="child_entered_tree" from="CollisionShape2D" to="." method="OnEnemyEntered"]
