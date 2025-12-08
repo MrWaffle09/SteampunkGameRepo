@@ -15,12 +15,13 @@ public partial class GameManager : Node
 
 
 
-    public enum PowerUps
-    {
+
+
+}
+public enum PowerUps
+{
 
     Speed1 = 50,
     Speed2 = 100,
     Speed3 = 150,
-    }
-
 }

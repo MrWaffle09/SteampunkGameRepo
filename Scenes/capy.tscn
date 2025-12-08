@@ -144,3 +144,5 @@ modulate = Color(1, 0.596078, 0.309804, 1)
 position = Vector2(-5, -21)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_l4m7t")
+
+[node name="Camera2D" type="Camera2D" parent="."]

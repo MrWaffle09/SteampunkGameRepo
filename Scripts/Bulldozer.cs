@@ -5,8 +5,7 @@ using MultiplayerProject.Scripts;
 public partial class Bulldozer : Player
 {
     
-    public int ID { get; set; } = 0;
-    public int speed { get; set; } = 150;
+    public override int speed { get; set; } = 150;
 
     public override void Die()
     {
