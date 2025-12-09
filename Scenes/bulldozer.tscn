@@ -285,7 +285,10 @@ offset_right = 40.0
 offset_bottom = -16.0
 theme_override_styles/background = SubResource("StyleBoxFlat_hqyu7")
 theme_override_styles/fill = SubResource("StyleBoxFlat_8uw2f")
+step = 20.0
 value = 100.0
-show_percentage = false
+rounded = true
+allow_greater = true
+allow_lesser = true
 
 [connection signal="child_entered_tree" from="CollisionShape2D" to="." method="OnEnemyEntered"]
