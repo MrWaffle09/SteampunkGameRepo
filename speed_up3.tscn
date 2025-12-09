@@ -1,0 +1,58 @@
+[gd_scene load_steps=9 format=3 uid="uid://crs45x16clwt8"]
+
+[ext_resource type="Script" uid="uid://8a0gtvajml2e" path="res://SpeedUp3.cs" id="1_7ephp"]
+[ext_resource type="Texture2D" uid="uid://72qyyskx0byi" path="res://Assets/Occult_Steampunk/Occult_Steampunk/Animations/Occult_ObjectsBig.png" id="2_baw8t"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4d3bt"]
+radius = 12.1655
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ephp"]
+atlas = ExtResource("2_baw8t")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_baw8t"]
+atlas = ExtResource("2_baw8t")
+region = Rect2(128, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y2yxr"]
+atlas = ExtResource("2_baw8t")
+region = Rect2(128, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h1teb"]
+atlas = ExtResource("2_baw8t")
+region = Rect2(128, 96, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tiopt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ephp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_baw8t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y2yxr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h1teb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[node name="SpeedUp" type="Area2D"]
+script = ExtResource("1_7ephp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_4d3bt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+texture_repeat = 1
+sprite_frames = SubResource("SpriteFrames_tiopt")
+autoplay = "default"
+frame_progress = 0.53456
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered3"]

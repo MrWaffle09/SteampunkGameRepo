@@ -261,7 +261,7 @@ bg_color = Color(0, 0, 0, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8uw2f"]
 bg_color = Color(0.0344778, 0.408675, 0.76475, 1)
 
-[node name="Bulldozer" type="CharacterBody2D"]
+[node name="Bulldozer2" type="CharacterBody2D"]
 modulate = Color(0.980392, 0.419608, 0, 1)
 script = ExtResource("1_flffy")
 
@@ -290,5 +290,7 @@ value = 100.0
 rounded = true
 allow_greater = true
 allow_lesser = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
 
 [connection signal="child_entered_tree" from="CollisionShape2D" to="." method="OnEnemyEntered"]
