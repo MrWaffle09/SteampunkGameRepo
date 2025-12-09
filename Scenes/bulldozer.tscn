@@ -291,4 +291,6 @@ rounded = true
 allow_greater = true
 allow_lesser = true
 
+[node name="Camera2D" type="Camera2D" parent="."]
+
 [connection signal="child_entered_tree" from="CollisionShape2D" to="." method="OnEnemyEntered"]

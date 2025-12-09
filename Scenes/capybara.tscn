@@ -206,3 +206,5 @@ frame_progress = 0.944894
 position = Vector2(0, -21)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_o8svn")
+
+[node name="Camera2D" type="Camera2D" parent="."]
