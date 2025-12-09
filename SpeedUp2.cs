@@ -2,7 +2,7 @@ using Godot;
 using System;
 using MultiplayerProject.Scripts;
 
-public partial class SpeedUp1 : Area2D
+public partial class SpeedUp2 : Area2D
 {
     public void _on_body_entered(Node body)
     {

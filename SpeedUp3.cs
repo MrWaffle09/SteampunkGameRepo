@@ -2,14 +2,14 @@ using Godot;
 using System;
 using MultiplayerProject.Scripts;
 
-public partial class SpeedUp1 : Area2D
+public partial class SpeedUp3 : Area2D
 {
-    public void _on_Area2D_body_entered(Node body)
+    public void _on_body_entered3(Node body)
     {
         GD.Print(body);
         if (body is Player player)
         {
-            player.speed += (int) PowerUps.Speed1;
+            player.speed += (int) PowerUps.Speed3;
             QueueFree();
         }
         else

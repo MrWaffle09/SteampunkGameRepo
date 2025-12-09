@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=4 uid="uid://cgoctc7myuy0e"]
+[gd_scene load_steps=7 format=4 uid="uid://cgoctc7myuy0e"]
 
-[ext_resource type="Script" uid="uid://drv3hvpgi1cnj" path="res://Scenes/ExampleLevel.cs" id="1_buwwh"]
+[ext_resource type="Script" uid="uid://drv3hvpgi1cnj" path="res://Scripts/ExampleLevel.cs" id="1_buwwh"]
 [ext_resource type="PackedScene" uid="uid://s1xr3drow0nl" path="res://Scenes/tilemap.tscn" id="2_8ysdc"]
 [ext_resource type="PackedScene" uid="uid://bv6m2d612dkjw" path="res://Scenes/BasicEnemy.tscn" id="4_gl4sr"]
 [ext_resource type="PackedScene" uid="uid://c1n3xi5osly0f" path="res://speed_up1.tscn" id="4_rvkij"]
+[ext_resource type="PackedScene" uid="uid://buiwqybiltfpt" path="res://speed_up2.tscn" id="5_e512q"]
+[ext_resource type="PackedScene" uid="uid://crs45x16clwt8" path="res://speed_up3.tscn" id="6_6w5wx"]
 
 [node name="ExampleLevel" type="Node2D"]
 script = ExtResource("1_buwwh")
@@ -36,3 +38,9 @@ position = Vector2(-163, 7)
 
 [node name="SpeedUp" parent="." instance=ExtResource("4_rvkij")]
 position = Vector2(135, -66)
+
+[node name="SpeedUp2" parent="." instance=ExtResource("5_e512q")]
+position = Vector2(195, -83)
+
+[node name="SpeedUp3" parent="." instance=ExtResource("6_6w5wx")]
+position = Vector2(182, -40)
