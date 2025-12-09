@@ -4,6 +4,18 @@ using MultiplayerProject.Scripts;
 
 public partial class Bulldozer : Player
 {
+    [Export]public int MaxHealth = 100;
+    public int CurrentHealth = 100;
+
+    private ProgressBar healthBar;
+
+    public override void _Ready()
+    {
+        healthBar = GetNode<ProgressBar>("healthBar");
+        healthBar.MaxValue = MaxHealth;
+        healthBar.Value = CurrentHealth;
+    }
+
     
     public override int speed { get; set; } = 150;
 
@@ -11,6 +23,11 @@ public partial class Bulldozer : Player
     {
         QueueFree();
     }
+    public int damage = 20;
+    
+    
+
+    
 
 	
     public override void _PhysicsProcess(double delta)
@@ -41,4 +58,21 @@ public partial class Bulldozer : Player
         Velocity = velocity;
         MoveAndSlide();
     }
+    public void OnEnemyEntered(Node2D node)
+    
+    {
+        
+       if (node is BasicEnemy)
+        {
+            CurrentHealth -= damage;
+            healthBar.Value = CurrentHealth; 
+
+            if (CurrentHealth <= 0)
+            {
+                Die();
+            }
+            
+        }
+    }
+
 }
