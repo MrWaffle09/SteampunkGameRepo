@@ -1,12 +1,12 @@
 [gd_scene load_steps=42 format=3 uid="uid://bk6qvtkenikmu"]
 
-[ext_resource type="Texture2D" uid="uid://7aqniprg40yb" path="res://Assets/Bulldozer/Bulldozer/Parry.png" id="1_bw2s7"]
+[ext_resource type="Texture2D" uid="uid://bqdgf24y6qkhs" path="res://Assets/Bulldozer/Bulldozer/Parry.png" id="1_bw2s7"]
 [ext_resource type="Script" uid="uid://dexm1amuqdkin" path="res://Scripts/Bulldozer.cs" id="1_flffy"]
-[ext_resource type="Texture2D" uid="uid://dc603dwnh1yx4" path="res://Assets/Bulldozer/Bulldozer/Attack.png" id="2_flffy"]
-[ext_resource type="Texture2D" uid="uid://dcf6d4qlevsxf" path="res://Assets/Bulldozer/Bulldozer/Death.png" id="3_hqyu7"]
-[ext_resource type="Texture2D" uid="uid://dd1b3n8i7s0ij" path="res://Assets/Bulldozer/Bulldozer/Hit.png" id="4_8uw2f"]
-[ext_resource type="Texture2D" uid="uid://b8ijp37rgqiye" path="res://Assets/Bulldozer/Bulldozer/Idle.png" id="5_nlsev"]
-[ext_resource type="Texture2D" uid="uid://cfptv0f34v3la" path="res://Assets/Bulldozer/Bulldozer/Walk.png" id="6_atdbl"]
+[ext_resource type="Texture2D" uid="uid://xc0gbo8dpbxm" path="res://Assets/Bulldozer/Bulldozer/Attack.png" id="2_flffy"]
+[ext_resource type="Texture2D" uid="uid://ysxy1a236tmm" path="res://Assets/Bulldozer/Bulldozer/Death.png" id="3_hqyu7"]
+[ext_resource type="Texture2D" uid="uid://bfqnejybi4hfw" path="res://Assets/Bulldozer/Bulldozer/Hit.png" id="4_8uw2f"]
+[ext_resource type="Texture2D" uid="uid://cghtgcrvpaqxg" path="res://Assets/Bulldozer/Bulldozer/Idle.png" id="5_nlsev"]
+[ext_resource type="Texture2D" uid="uid://dye0slnjow4fb" path="res://Assets/Bulldozer/Bulldozer/Walk.png" id="6_atdbl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oonca"]
 atlas = ExtResource("1_bw2s7")

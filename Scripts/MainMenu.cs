@@ -10,7 +10,7 @@ public override void _Ready()
          GetNode<Button>("VBoxContainer/Start").GrabFocus();
 	}
 	public void OnPressed() {
-		 GetTree().ChangeSceneToFile("res://Scenes/ExampleLevel.tscn");
+		 GetTree().ChangeSceneToFile("res://Scenes/character_selector.tscn");
 		
 	}
 	public void SoundPressed() {
