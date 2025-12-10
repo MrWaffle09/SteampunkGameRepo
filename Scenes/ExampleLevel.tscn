@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://crs45x16clwt8" path="res://speed_up3.tscn" id="6_6w5wx"]
 
 [node name="ExampleLevel" type="Node2D"]
+process_mode = 3
 script = ExtResource("1_buwwh")
 
 [node name="floor" parent="." instance=ExtResource("2_8ysdc")]
