@@ -40,5 +40,9 @@ public partial class ExampleLevel : Node2D
             GD.Print(GameManager.BullID);
             GD.Print(currentBulldozer.ID);
         }
+
     }
 }
+
+
+
