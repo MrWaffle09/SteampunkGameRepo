@@ -1,9 +1,11 @@
 [gd_scene load_steps=5 format=4 uid="uid://cgoctc7myuy0e"]
 
 [ext_resource type="PackedScene" uid="uid://s1xr3drow0nl" path="res://Scenes/tilemap.tscn" id="2_8ysdc"]
-[ext_resource type="PackedScene" uid="uid://duqngnqypkr7f" path="res://Scenes/microwavejo.tscn" id="2_buwwh"]
-[ext_resource type="PackedScene" uid="uid://bk6qvtkenikmu" path="res://Scenes/bulldozer.tscn" id="3_gl4sr"]
-[ext_resource type="PackedScene" uid="uid://bv6m2d612dkjw" path="res://Scenes/BasicEnemy.tscn" id="4_gl4sr"]
+[ext_resource type="PackedScene" uid="uid://c1n3xi5osly0f" path="res://speed_up1.tscn" id="4_rvkij"]
+[ext_resource type="PackedScene" uid="uid://buiwqybiltfpt" path="res://speed_up2.tscn" id="5_e512q"]
+[ext_resource type="PackedScene" uid="uid://crs45x16clwt8" path="res://speed_up3.tscn" id="6_6w5wx"]
+[ext_resource type="PackedScene" uid="uid://dja5sukxk205f" path="res://pauser.tscn" id="6_e512q"]
+[ext_resource type="Texture2D" uid="uid://cjtdx1ncjdij1" path="res://Assets/XboxMenu.png" id="7_6w5wx"]
 
 [node name="ExampleLevel" type="Node2D"]
 position = Vector2(10, 1)
@@ -38,9 +40,20 @@ position = Vector2(47, 26)
 position = Vector2(72, -21)
 script = null
 
-[node name="Camera2D" type="Camera2D" parent="Microwave"]
-position_smoothing_enabled = true
-position_smoothing_speed = 3.0
+[node name="SpeedUp3" parent="." instance=ExtResource("6_6w5wx")]
+position = Vector2(182, -40)
 
-[node name="CharacterBody2D2" parent="." instance=ExtResource("4_gl4sr")]
-position = Vector2(-18, -56)
+[node name="Pauser" parent="." instance=ExtResource("6_e512q")]
+process_mode = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-335, -216)
+scale = Vector2(0.44, 0.4)
+texture = ExtResource("7_6w5wx")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -320.0
+offset_top = -228.0
+offset_right = -239.0
+offset_bottom = -203.0
+text = "To Pause"
