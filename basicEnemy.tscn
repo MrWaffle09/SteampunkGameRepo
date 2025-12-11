@@ -16,7 +16,7 @@ size = Vector2(60, 60)
 radius = 380.716
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2lmrd"]
-size = Vector2(61, 70)
+size = Vector2(88, 78)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gvpeh"]
 atlas = ExtResource("3_b15uj")
@@ -106,18 +106,19 @@ texture = ExtResource("1_i4a7s")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_fphe5")
+one_way_collision_margin = 128.0
 
 [node name="damage" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="damage"]
 modulate = Color(1, 0.152941, 1, 1)
-position = Vector2(1.5, 2)
+position = Vector2(-1, -2)
 shape = SubResource("RectangleShape2D_2lmrd")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="health" type="AnimatedSprite2D" parent="."]
 position = Vector2(3, 56)
 sprite_frames = SubResource("SpriteFrames_ldv2l")
-animation = &"6_hp"
+animation = &"1_hp"
 autoplay = "6_hp"
 
 [connection signal="body_entered" from="Area2D" to="." method="bodyEntered"]
