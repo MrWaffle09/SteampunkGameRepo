@@ -13,10 +13,13 @@ config_version=5
 config/name="Multiplayer Project"
 run/main_scene="uid://btmtg1efygx0g"
 config/features=PackedStringArray("4.4", "C#", "Forward Plus")
+<<<<<<< HEAD
 
 [autoload]
 
 GameManager="*res://Scripts/GameManager.cs"
+=======
+>>>>>>> parent of e281e8d (Merge branch '3-basic-enemies' of https://github.com/MrWaffle09/SteampunkGameRepo into 3-basic-enemies)
 
 [display]
 
