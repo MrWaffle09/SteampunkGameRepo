@@ -17,9 +17,8 @@ public partial class Bulldozer : Player
     }
 
     
-    public int ID { get; set; } = 0;
-    public int speed { get; set; } = 150;
-   
+    public override int speed { get; set; } = 150;
+
     public override void Die()
     {
         QueueFree();
@@ -63,22 +62,13 @@ public partial class Bulldozer : Player
     
     {
         
-       if (node is Node2D)
+       if (node is BasicEnemy)
         {
             CurrentHealth -= damage;
-            if (CurrentHealth <= 90)
-            {
-                CurrentHealth -= damage;
-                healthBar.Value = CurrentHealth;  
-                
-            }
-            if (CurrentHealth <= 70)
-            {
-                healthBar.Value = CurrentHealth;
-            }
+            healthBar.Value = CurrentHealth; 
+
             if (CurrentHealth <= 0)
             {
-                healthBar.Value = CurrentHealth;
                 Die();
             }
             
