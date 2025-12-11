@@ -4,8 +4,8 @@ using MultiplayerProject.Scripts;
 
 public partial class Mechanic : Player
 {
-
-    public override int speed { get; set; } = 75;
+    public int ID { get; set; } = 1;
+    public int speed { get; set; } = 75;
 
     public override void Die()
     {
