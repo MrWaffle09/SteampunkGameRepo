@@ -4,8 +4,7 @@ using MultiplayerProject.Scripts;
 
 public partial class Capybara : Player
 {
-    public int ID { get; set; } = 0;
-    public int speed { get; set; } = 100;
+    public override int speed { get; set; } = 100;
 
     public override void Die()
     {
