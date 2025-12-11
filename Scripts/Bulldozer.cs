@@ -63,14 +63,13 @@ public partial class Bulldozer : Player
     
     {
         
-       if (node is Node2D)
+       if (node is BasicEnemy)
         {
             CurrentHealth -= damage;
-            if (CurrentHealth <= 90)
+            if (CurrentHealth <=90)
             {
-                CurrentHealth -= damage;
-                healthBar.Value = CurrentHealth;  
-                
+              healthBar.Value = CurrentHealth;  
+            
             }
             if (CurrentHealth <= 70)
             {
