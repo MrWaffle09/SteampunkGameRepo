@@ -21,7 +21,7 @@ public partial class BasicEnemy: CharacterBody2D
     }
 
 // what the enemy is going to do when the player get too close to the area2D
-    public void OnPlayerEntered(Node2D node) {
+    public void bodyEntered(Node2D node) {
         if (node is CharacterBody2D){
              
             Vector2 direction = (node.GlobalPosition - this.GlobalPosition).Normalized();
@@ -39,12 +39,12 @@ public partial class BasicEnemy: CharacterBody2D
     }
       
     //Stop if the player is out
-    public void OnPlayerOut(Node2D node){
+    public void bodyExited(Node2D node){
       Velocity = Vector2.Zero;
         
     }
     //Player damage
-    public void BodyEntered(Node2D node)
+    public void Damage(Node2D node)
     {
      currentHealth -= damage;
         if (currentHealth <= 80)

@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://c1n3xi5osly0f"]
 
-[ext_resource type="Script" uid="uid://5d7gouoc720p" path="res://SpeedUp1.cs" id="1_4d3bt"]
-[ext_resource type="Texture2D" uid="uid://72qyyskx0byi" path="res://Assets/Occult_Steampunk/Occult_Steampunk/Animations/Occult_ObjectsBig.png" id="2_4d3bt"]
+[ext_resource type="Script" uid="uid://5d7gouoc720p" path="res://Scripts/SpeedUp1.cs" id="1_4d3bt"]
+[ext_resource type="Texture2D" uid="uid://bxbxq3qqn1t4k" path="res://Assets/Occult_Steampunk/Occult_Steampunk/Animations/Occult_ObjectsBig.png" id="2_4d3bt"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4d3bt"]
 radius = 12.1655
