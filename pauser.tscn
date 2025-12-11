@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dja5sukxk205f"]
 
-[ext_resource type="Script" uid="uid://11golaf3r4p6" path="res://Pauser.cs" id="1_mgbip"]
+[ext_resource type="Script" uid="uid://11golaf3r4p6" path="res://Scripts/Pauser.cs" id="1_mgbip"]
 
 [node name="Pauser" type="Node"]
 script = ExtResource("1_mgbip")
