@@ -253,82 +253,60 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bw2s7"]
-radius = 13.0
-height = 32.0
+radius = 16.0
+height = 34.0
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8uw2f"]
-atlas = ExtResource("8_hqyu7")
-region = Rect2(48, 144, 48, 18)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_nlsev"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_hqyu7"]
 atlas = ExtResource("8_hqyu7")
 region = Rect2(240, 144, 48, 18)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_atdbl"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_8uw2f"]
 atlas = ExtResource("8_hqyu7")
 region = Rect2(192, 144, 48, 18)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ewfar"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_nlsev"]
 atlas = ExtResource("8_hqyu7")
 region = Rect2(144, 144, 48, 18)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5ktlv"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_atdbl"]
 atlas = ExtResource("8_hqyu7")
 region = Rect2(96, 144, 48, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ewfar"]
+atlas = ExtResource("8_hqyu7")
+region = Rect2(48, 144, 48, 18)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_06cvf"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8uw2f")
-}],
-"loop": true,
-"name": &"hp_100",
-"speed": 5.0
+"texture": SubResource("AtlasTexture_hqyu7")
 }, {
-"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8uw2f")
+}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_nlsev")
-}],
-"loop": true,
-"name": &"hp_20",
-"speed": 5.0
 }, {
-"frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_atdbl")
-}],
-"loop": true,
-"name": &"hp_40",
-"speed": 5.0
 }, {
-"frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ewfar")
 }],
 "loop": true,
-"name": &"hp_60",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5ktlv")
-}],
-"loop": true,
-"name": &"hp_80",
-"speed": 5.0
+"name": &"hp_100",
+"speed": 1.0
 }]
 
 [node name="Bulldozer2" type="CharacterBody2D"]
-modulate = Color(0.980392, 0.419608, 0, 1)
 script = ExtResource("1_flffy")
 
 [node name="AnimatableBody2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(2, -14)
 sprite_frames = SubResource("SpriteFrames_rp6fr")
-animation = &"idle"
+animation = &"I dont know what parry is."
 autoplay = "idle"
-frame_progress = 0.951211
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 light_mask = 3
@@ -339,8 +317,11 @@ shape = SubResource("CapsuleShape2D_bw2s7")
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="hp" type="AnimatedSprite2D" parent="."]
-position = Vector2(1, -22)
+position = Vector2(25, -3)
+rotation = -1.56412
 sprite_frames = SubResource("SpriteFrames_06cvf")
 animation = &"hp_100"
+autoplay = "hp_100"
+frame_progress = 0.609961
 
 [connection signal="child_entered_tree" from="CollisionShape2D" to="." method="OnEnemyEntered"]

@@ -4,7 +4,7 @@ using System;
 public partial class BasicEnemy: CharacterBody2D
 {
     //The enemy variables
-    public int Speed = 50; 
+    public int Speed = 70; 
     private CharacterBody2D Player;
     public int currentHealth = 110;
     public int damage = 20;
@@ -21,7 +21,7 @@ public partial class BasicEnemy: CharacterBody2D
     }
 
 // what the enemy is going to do when the player get too close to the area2D
-    public void bodyEntered(Node2D node) {
+    public void BodyEntered(Node2D node) {
         if (node is CharacterBody2D){
              
             Vector2 direction = (node.GlobalPosition - this.GlobalPosition).Normalized();
@@ -39,7 +39,7 @@ public partial class BasicEnemy: CharacterBody2D
     }
       
     //Stop if the player is out
-    public void bodyExited(Node2D node){
+    public void BodyExited(Node2D node){
       Velocity = Vector2.Zero;
         
     }
@@ -76,7 +76,7 @@ public partial class BasicEnemy: CharacterBody2D
 
         
     }
-    public void PlayerOut(Node2D Player)
+    public void PlayerOut(Node2D nodes)
     {
        Velocity = Vector2.Zero; 
     }

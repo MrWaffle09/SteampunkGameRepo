@@ -1,25 +1,20 @@
-[gd_scene load_steps=9 format=4 uid="uid://cgoctc7myuy0e"]
+[gd_scene load_steps=11 format=4 uid="uid://cgoctc7myuy0e"]
 
 [ext_resource type="Script" uid="uid://drv3hvpgi1cnj" path="res://Scripts/ExampleLevel.cs" id="1_buwwh"]
 [ext_resource type="PackedScene" uid="uid://s1xr3drow0nl" path="res://Scenes/tilemap.tscn" id="2_8ysdc"]
 [ext_resource type="PackedScene" uid="uid://c1n3xi5osly0f" path="res://speed_up1.tscn" id="4_rvkij"]
 [ext_resource type="PackedScene" uid="uid://buiwqybiltfpt" path="res://speed_up2.tscn" id="5_e512q"]
 [ext_resource type="PackedScene" uid="uid://crs45x16clwt8" path="res://speed_up3.tscn" id="6_6w5wx"]
-[ext_resource type="PackedScene" uid="uid://dja5sukxk205f" path="res://pauser.tscn" id="6_e512q"]
-[ext_resource type="Texture2D" uid="uid://dtpn58u4bnwy7" path="res://Assets/XboxMenu.png" id="7_6w5wx"]
-
-
-[ext_resource type="PackedScene" path="res://speed_up1.tscn" id="4_rvkij"]
-[ext_resource type="PackedScene" path="res://speed_up2.tscn" id="5_e512q"]
-[ext_resource type="PackedScene" path="res://speed_up3.tscn" id="6_6w5wx"]
 [ext_resource type="PackedScene" uid="uid://dudweip60jgi3" path="res://pauser.tscn" id="6_e512q"]
-[ext_resource type="Texture2D" uid="uid://cjtdx1ncjdij1" path="res://Assets/XboxMenu.png" id="7_6w5wx"]
-[ext_resource type="Script" uid="uid://mknl78jxxdpk" path="res://Scenes/LevelMover.cs" id="8_rud2n"]
+[ext_resource type="Texture2D" uid="uid://dtpn58u4bnwy7" path="res://Assets/XboxMenu.png" id="7_6w5wx"]
+[ext_resource type="Script" uid="uid://mknl78jxxdpk" path="res://Scripts/LevelMover.cs" id="8_rud2n"]
+[ext_resource type="PackedScene" uid="uid://dbdv3knyb2tqn" path="res://Scenes/basicEnemy.tscn" id="9_ekkkb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ekkkb"]
 radius = 46.5296
 
 [node name="ExampleLevel" type="Node2D"]
+position = Vector2(584, 488)
 script = ExtResource("1_buwwh")
 
 [node name="floor" parent="." instance=ExtResource("2_8ysdc")]
@@ -76,5 +71,8 @@ script = ExtResource("8_rud2n")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LevelMover"]
 position = Vector2(-330, 11)
 shape = SubResource("CircleShape2D_ekkkb")
+
+[node name="BasicEnemy" parent="." instance=ExtResource("9_ekkkb")]
+position = Vector2(962, -56)
 
 [connection signal="body_entered" from="LevelMover" to="LevelMover" method="_on_level_mover_body_entered"]

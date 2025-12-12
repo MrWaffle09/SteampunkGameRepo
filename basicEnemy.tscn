@@ -13,10 +13,10 @@
 size = Vector2(60, 60)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fphe5"]
-radius = 380.716
+radius = 188.066
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2lmrd"]
-size = Vector2(88, 78)
+size = Vector2(181, 173)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gvpeh"]
 atlas = ExtResource("3_b15uj")
@@ -94,6 +94,7 @@ animations = [{
 }]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+slide_on_ceiling = false
 script = ExtResource("1_x51mg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -112,7 +113,7 @@ one_way_collision_margin = 128.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="damage"]
 modulate = Color(1, 0.152941, 1, 1)
-position = Vector2(-1, -2)
+position = Vector2(2.5, 12.5)
 shape = SubResource("RectangleShape2D_2lmrd")
 
 [node name="health" type="AnimatedSprite2D" parent="."]
@@ -121,7 +122,7 @@ sprite_frames = SubResource("SpriteFrames_ldv2l")
 animation = &"1_hp"
 autoplay = "6_hp"
 
-[connection signal="body_entered" from="Area2D" to="." method="bodyEntered"]
-[connection signal="body_exited" from="Area2D" to="." method="bodyExited"]
+[connection signal="body_entered" from="Area2D" to="." method="BodyEntered"]
+[connection signal="body_exited" from="Area2D" to="." method="BodyExited"]
 [connection signal="body_entered" from="damage" to="." method="Damage"]
 [connection signal="body_exited" from="damage" to="." method="PlayerOut"]

@@ -7,7 +7,7 @@ public partial class Bulldozer : Player
     
     public int CurrentHealth = 100;
 
-    
+    public AnimatedSprite2D animatedSprite2D;
 
 
     
@@ -67,6 +67,7 @@ public partial class Bulldozer : Player
         if (CurrentHealth <= 80)
         {
             animatedSprite2D.Play("hp_80");
+            GD.Print("no health");
         }
         if (currentHealth <= 60)
         {
@@ -82,7 +83,6 @@ public partial class Bulldozer : Player
         }
         if (currentHealth <= 0)
         {
-            Velocity = Vector2.Zero;
             Die();
         }
         }

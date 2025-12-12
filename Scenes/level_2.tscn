@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=4 uid="uid://mednxql7bpaa"]
 
 [ext_resource type="Script" uid="uid://de1p54uo4pu4p" path="res://Level2.cs" id="1_smnlx"]
-[ext_resource type="Texture2D" uid="uid://crrqwwydus3nd" path="res://Assets/Occult_Steampunk/Occult_Steampunk/Tiles/Occult_FloorsWall.png" id="2_12fag"]
-[ext_resource type="Texture2D" uid="uid://by3lkqko0pqu3" path="res://Assets/Occult_Steampunk_MZ/Occult_Steampunk_MZ/Active.png" id="3_1q6tm"]
-[ext_resource type="Script" uid="uid://cxnqekv07151x" path="res://Scenes/WinMover.cs" id="3_v36qu"]
+[ext_resource type="Texture2D" uid="uid://dhudqlu1uc25i" path="res://Assets/Occult_Steampunk/Occult_Steampunk/Tiles/Occult_FloorsWall.png" id="2_12fag"]
+[ext_resource type="Texture2D" uid="uid://dma1hlsji7nm7" path="res://Assets/Occult_Steampunk_MZ/Occult_Steampunk_MZ/Active.png" id="3_1q6tm"]
+[ext_resource type="Script" uid="uid://cxnqekv07151x" path="res://Scripts/WinMover.cs" id="3_v36qu"]
 [ext_resource type="PackedScene" uid="uid://dudweip60jgi3" path="res://pauser.tscn" id="4_v36qu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1q6tm"]
@@ -146,7 +146,7 @@ tile_map_data = PackedByteArray("AAD//wAAAAACAAAAAAAAAAAAAAACAAAAAAABAAAAAAACAAA
 tile_set = SubResource("TileSet_v36qu")
 
 [node name="WinMover" type="Area2D" parent="."]
-position = Vector2(816, -4)
+position = Vector2(814, -178)
 script = ExtResource("3_v36qu")
 
 [node name="Sprite2D" type="Sprite2D" parent="WinMover"]
