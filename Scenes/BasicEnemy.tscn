@@ -1,13 +1,13 @@
 [gd_scene load_steps=19 format=3 uid="uid://dbdv3knyb2tqn"]
 
 [ext_resource type="Script" uid="uid://ohkgkdg33gjl" path="res://Scripts/BasicEnemy.cs" id="1_6x443"]
-[ext_resource type="Texture2D" uid="uid://0a752a2s0vjm" path="res://icon.png" id="2_b7xc3"]
-[ext_resource type="Texture2D" uid="uid://dyw05vyufk4vw" path="res://Assets/enemy/Steampunk HP Bar - Version 2 (F).png" id="4_lc4gu"]
-[ext_resource type="Texture2D" uid="uid://coytoeck66ksl" path="res://Assets/enemy/Steampunk HP Bar - Version 2 (E).png" id="5_6do23"]
-[ext_resource type="Texture2D" uid="uid://i3lb76swq10p" path="res://Assets/enemy/Steampunk HP Bar - Version 2 (D).png" id="6_f300b"]
-[ext_resource type="Texture2D" uid="uid://d1t7tgwtobi55" path="res://Assets/enemy/Steampunk HP Bar - Version 2 (C).png" id="7_gouef"]
-[ext_resource type="Texture2D" uid="uid://cku14tyw4s87o" path="res://Assets/enemy/Steampunk HP Bar - Version 2 (B).png" id="8_tfhvj"]
-[ext_resource type="Texture2D" uid="uid://v7g3anfaneps" path="res://Assets/enemy/Steampunk HP Bar - Version 2 (A).png" id="9_hjsaa"]
+[ext_resource type="Texture2D" uid="uid://qm6w3p4557fh" path="res://icon.png" id="2_b7xc3"]
+[ext_resource type="Texture2D" uid="uid://6pacplnlphgh" path="res://Assets/enemy/Steampunk HP Bar - Version 2 (F).png" id="4_lc4gu"]
+[ext_resource type="Texture2D" uid="uid://hkppk7tmniii" path="res://Assets/enemy/Steampunk HP Bar - Version 2 (E).png" id="5_6do23"]
+[ext_resource type="Texture2D" uid="uid://bvr8c4in1o17b" path="res://Assets/enemy/Steampunk HP Bar - Version 2 (D).png" id="6_f300b"]
+[ext_resource type="Texture2D" uid="uid://mrdmpyonj3xi" path="res://Assets/enemy/Steampunk HP Bar - Version 2 (C).png" id="7_gouef"]
+[ext_resource type="Texture2D" uid="uid://4oo00m0y182y" path="res://Assets/enemy/Steampunk HP Bar - Version 2 (B).png" id="8_tfhvj"]
+[ext_resource type="Texture2D" uid="uid://bttud6f455hv0" path="res://Assets/enemy/Steampunk HP Bar - Version 2 (A).png" id="9_hjsaa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hp7c0"]
 size = Vector2(35, 37)
