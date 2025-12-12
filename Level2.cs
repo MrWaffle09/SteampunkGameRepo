@@ -2,7 +2,7 @@ using Godot;
 using System;
 using MultiplayerProject.Scripts;
 
-public partial class ExampleLevel : Node2D
+public partial class Level2 : Node2D
 {
     public PackedScene Microwave = GD.Load<PackedScene>("res://Scenes/microwavejo.tscn");
     public PackedScene Bulldozer = GD.Load<PackedScene>("res://Scenes/bulldozer.tscn");
@@ -40,11 +40,5 @@ public partial class ExampleLevel : Node2D
             GD.Print(GameManager.BullID);
             GD.Print(currentBulldozer.ID);
         }
-        
-        
-
     }
 }
-
-
-
