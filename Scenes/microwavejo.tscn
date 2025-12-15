@@ -1,9 +1,9 @@
 [gd_scene load_steps=24 format=3 uid="uid://duqngnqypkr7f"]
 
-[ext_resource type="Texture2D" uid="uid://cmdr7y7mwxq2y" path="res://Assets/Microwave/Microwave/Idle.png" id="1_akvxi"]
+[ext_resource type="Texture2D" uid="uid://c6vh10kqgol0q" path="res://Assets/Microwave/Microwave/Idle.png" id="1_akvxi"]
 [ext_resource type="Script" uid="uid://busr4glxgkn18" path="res://Scripts/Microwave.cs" id="1_n7v8p"]
-[ext_resource type="Texture2D" uid="uid://8jy4xxvqx760" path="res://Assets/Microwave/Microwave/Walk.png" id="2_n7v8p"]
-[ext_resource type="Texture2D" uid="uid://bsmgdnwts4xfv" path="res://Assets/04.png" id="4_8xg0r"]
+[ext_resource type="Texture2D" uid="uid://b4xfw7jybkn1b" path="res://Assets/Microwave/Microwave/Walk.png" id="2_n7v8p"]
+[ext_resource type="Texture2D" uid="uid://cwikqr1y4epka" path="res://Assets/04.png" id="4_8xg0r"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jstk6"]
 atlas = ExtResource("1_akvxi")

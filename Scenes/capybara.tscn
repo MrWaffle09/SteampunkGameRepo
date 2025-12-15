@@ -1,8 +1,8 @@
 [gd_scene load_steps=36 format=3 uid="uid://cw8wpcg5s7tbm"]
 
 [ext_resource type="Script" uid="uid://dnfu7e38qy1q" path="res://Scripts/Capybara.cs" id="1_8440m"]
-[ext_resource type="Texture2D" uid="uid://cyib7f2oobo5b" path="res://Assets/charlieTheCapybaraAnimationSheet.png" id="2_lf7ec"]
-[ext_resource type="Texture2D" uid="uid://bsmgdnwts4xfv" path="res://Assets/04.png" id="3_lf7ec"]
+[ext_resource type="Texture2D" uid="uid://cl76qfu5tfkd6" path="res://Assets/charlieTheCapybaraAnimationSheet.png" id="2_lf7ec"]
+[ext_resource type="Texture2D" uid="uid://cwikqr1y4epka" path="res://Assets/04.png" id="3_lf7ec"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oy10m"]
 atlas = ExtResource("2_lf7ec")

@@ -1,13 +1,13 @@
 [gd_scene load_steps=19 format=3 uid="uid://dbdv3knyb2tqn"]
 
 [ext_resource type="Script" uid="uid://ohkgkdg33gjl" path="res://Scripts/BasicEnemy.cs" id="1_6x443"]
-[ext_resource type="Texture2D" uid="uid://13k15v6fqts6" path="res://Assets/icon.png" id="2_b7xc3"]
-[ext_resource type="Texture2D" uid="uid://b4fv46y7ocqqf" path="res://Assets/enemy/Steampunk HP Bar - Version 2 (F).png" id="4_lc4gu"]
-[ext_resource type="Texture2D" uid="uid://b2i7gjoramaun" path="res://Assets/enemy/Steampunk HP Bar - Version 2 (E).png" id="5_6do23"]
-[ext_resource type="Texture2D" uid="uid://cw6ptrh4jx7tb" path="res://Assets/enemy/Steampunk HP Bar - Version 2 (D).png" id="6_f300b"]
-[ext_resource type="Texture2D" uid="uid://c1jl00nqndcv3" path="res://Assets/enemy/Steampunk HP Bar - Version 2 (C).png" id="7_gouef"]
-[ext_resource type="Texture2D" uid="uid://buhtq6rrrwdh5" path="res://Assets/enemy/Steampunk HP Bar - Version 2 (B).png" id="8_tfhvj"]
-[ext_resource type="Texture2D" uid="uid://d070jgwi5ty3" path="res://Assets/enemy/Steampunk HP Bar - Version 2 (A).png" id="9_hjsaa"]
+[ext_resource type="Texture2D" uid="uid://by2sem10wm0xc" path="res://Assets/icon.png" id="2_b7xc3"]
+[ext_resource type="Texture2D" uid="uid://l4hwcq5sk2tp" path="res://Assets/enemy/Steampunk HP Bar - Version 2 (F).png" id="4_lc4gu"]
+[ext_resource type="Texture2D" uid="uid://btil80p0ijak8" path="res://Assets/enemy/Steampunk HP Bar - Version 2 (E).png" id="5_6do23"]
+[ext_resource type="Texture2D" uid="uid://dv7383c8q70eg" path="res://Assets/enemy/Steampunk HP Bar - Version 2 (D).png" id="6_f300b"]
+[ext_resource type="Texture2D" uid="uid://dpjnekyste6fr" path="res://Assets/enemy/Steampunk HP Bar - Version 2 (C).png" id="7_gouef"]
+[ext_resource type="Texture2D" uid="uid://bufuc1lhjh44p" path="res://Assets/enemy/Steampunk HP Bar - Version 2 (B).png" id="8_tfhvj"]
+[ext_resource type="Texture2D" uid="uid://d02siwrbcwd3p" path="res://Assets/enemy/Steampunk HP Bar - Version 2 (A).png" id="9_hjsaa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hp7c0"]
 size = Vector2(35, 37)
