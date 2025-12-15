@@ -5,7 +5,11 @@ public partial class WinScreen : Node2D
 {
     public async override void _Input(InputEvent @event)
     {
-        await ToSignal(GetTree().CreateTimer(5f), "timeout");
-        GetTree().Quit();
+        if (@event is InputEventJoypadButton)
+        {
+            await ToSignal(GetTree().CreateTimer(5f), "timeout");
+            GetTree().Quit();
+        }
+
     }
 }
