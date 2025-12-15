@@ -8,6 +8,8 @@ public partial class Bulldozer : Player
     public int CurrentHealth = 100;
 
     public AnimatedSprite2D animatedSprite2D;
+    private int steam = 0;
+    private AnimatedSprite2D steamSprite;
 
 
     
@@ -15,17 +17,23 @@ public partial class Bulldozer : Player
 
     public override void Die()
     {
+        GameManager.alivePlayers -= 1;
+        GameManager.activeCharacters.Remove("Bull");
+        if (GameManager.alivePlayers < 1)
+        {
+            GetTree().ChangeSceneToFile("res://Scenes/lose_screen.tscn");
+        }
         QueueFree();
     }
     public int damage = 20;
     
     public override void _Ready()
     {
-        animatedSprite2D = GetNode<AnimatedSprite2D>("hp");
-        
+        steamSprite = GetNode<AnimatedSprite2D>("hp");
+        SteamTick();
     }
 
-    
+        
 
 	
     public override void _PhysicsProcess(double delta)
@@ -69,23 +77,54 @@ public partial class Bulldozer : Player
             animatedSprite2D.Play("hp_80");
             GD.Print("no health");
         }
-        if (currentHealth <= 60)
+        if (CurrentHealth <= 60)
         {
             animatedSprite2D.Play("hp_60");
         }
-        if (currentHealth <= 40)
+        if (CurrentHealth <= 40)
         {
             animatedSprite2D.Play("hp_40");
         }
-        if (currentHealth <= 20)
+        if (CurrentHealth <= 20)
         {
             animatedSprite2D.Play("hp_20");
         }
-        if (currentHealth <= 0)
+        if (CurrentHealth <= 0)
         {
             Die();
         }
         }
     }
+    
+    public async void SteamTick()
+    {
+        while (steam <= 4)
+        {
+            await ToSignal(GetTree().CreateTimer(10f), "timeout");
+            steam += 1;
+            CurrentHealth -= 20;
+            GD.Print(CurrentHealth);
 
+            if (CurrentHealth <= 0)
+            {
+                Die();
+            }
+            else if (CurrentHealth <= 20)
+            {
+                steamSprite.Play("hp_20");
+            }
+            else if (CurrentHealth <= 40)
+            {
+                steamSprite.Play("hp_40");
+            }
+            else if (CurrentHealth <= 60)
+            {
+                steamSprite.Play("hp_60");
+            }
+            else if (CurrentHealth <= 80)
+            {
+                steamSprite.Play("hp_80");
+            }
+        }
+    } 
 }

@@ -9,6 +9,8 @@ public partial class GameManager : Node
     public static int MechID = 0;
     public static int MicroID = 0;
     public static int BullID = 0;
+    
+    public static int alivePlayers = 0;
 
 
     public static List<string> activeCharacters = new List<string>();

@@ -1,9 +1,9 @@
-[gd_scene load_steps=27 format=3 uid="uid://6x3thxnrr1mb"]
+[gd_scene load_steps=26 format=3 uid="uid://6x3thxnrr1mb"]
 
 [ext_resource type="Script" uid="uid://cusuqp85n0baw" path="res://Scripts/Mechanic.cs" id="1_m44dx"]
-[ext_resource type="Texture2D" uid="uid://ccbnfxloqrsrt" path="res://Assets/Mechanic Mike/Mechanic Mike/idle.png" id="2_y7pfa"]
-[ext_resource type="Texture2D" uid="uid://b4oltvehb56dd" path="res://Assets/Mechanic Mike/Mechanic Mike/run.png" id="3_jkpjw"]
-[ext_resource type="Texture2D" uid="uid://cxop2ovglua4k" path="res://Scripts/04.png" id="4_jo5ov"]
+[ext_resource type="Texture2D" uid="uid://b1d6uer50emjo" path="res://Assets/Mechanic Mike/Mechanic Mike/idle.png" id="2_y7pfa"]
+[ext_resource type="Texture2D" uid="uid://ipaxfdtonw3c" path="res://Assets/Mechanic Mike/Mechanic Mike/run.png" id="3_jkpjw"]
+[ext_resource type="Texture2D" uid="uid://bsmgdnwts4xfv" path="res://Assets/04.png" id="4_jo5ov"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6t5aa"]
 atlas = ExtResource("2_y7pfa")
@@ -113,54 +113,67 @@ animations = [{
 radius = 7.0
 height = 18.0
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bvprd"]
-atlas = ExtResource("4_jo5ov")
-region = Rect2(240, 108, 48, 18)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fl121"]
-atlas = ExtResource("4_jo5ov")
-region = Rect2(192, 108, 48, 18)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_f6tvw"]
-atlas = ExtResource("4_jo5ov")
-region = Rect2(144, 108, 48, 18)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_etffa"]
-atlas = ExtResource("4_jo5ov")
-region = Rect2(96, 108, 48, 18)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_e4mfp"]
 atlas = ExtResource("4_jo5ov")
 region = Rect2(48, 108, 48, 18)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_roor7"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_jo5ov"]
 atlas = ExtResource("4_jo5ov")
-region = Rect2(288, 108, 48, 18)
+region = Rect2(240, 112, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bvprd"]
+atlas = ExtResource("4_jo5ov")
+region = Rect2(192, 112, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fl121"]
+atlas = ExtResource("4_jo5ov")
+region = Rect2(144, 112, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f6tvw"]
+atlas = ExtResource("4_jo5ov")
+region = Rect2(48, 112, 48, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wy4wn"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_bvprd")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fl121")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_f6tvw")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_etffa")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_e4mfp")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_roor7")
 }],
 "loop": true,
-"name": &"default",
+"name": &"hp_100",
 "speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jo5ov")
+}],
+"loop": true,
+"name": &"hp_20",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bvprd")
+}],
+"loop": true,
+"name": &"hp_40",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fl121")
+}],
+"loop": true,
+"name": &"hp_60",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f6tvw")
+}],
+"loop": true,
+"name": &"hp_80",
+"speed": 5.0
 }]
 
 [node name="Mechanic" type="CharacterBody2D"]
@@ -173,7 +186,7 @@ position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_tx1dd")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.84274364
+frame_progress = 0.842744
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -14)
@@ -181,9 +194,9 @@ shape = SubResource("CapsuleShape2D_gymyn")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+[node name="hp" type="AnimatedSprite2D" parent="."]
 position = Vector2(-22, -16)
-rotation = 4.7211156
+rotation = 4.72112
 sprite_frames = SubResource("SpriteFrames_wy4wn")
-autoplay = "default"
-frame_progress = 0.1042033
+animation = &"hp_100"
+autoplay = "hp_100"

@@ -6,12 +6,27 @@ public partial class Mechanic : Player
 {
 
     public override int speed { get; set; } = 75;
+    public int CurrentHealth = 100;
+    private int steam = 0;
+    private AnimatedSprite2D steamSprite;
 
     public override void Die()
     {
+        GameManager.activeCharacters.Remove("Mech");
+        GameManager.alivePlayers -= 1;
+        if (GameManager.alivePlayers < 1)
+        {
+            GetTree().ChangeSceneToFile("res://Scenes/lose_screen.tscn");
+        }
         QueueFree();
-    }
 
+
+    }
+    public override void _Ready()
+    {
+        steamSprite = GetNode<AnimatedSprite2D>("hp");
+        SteamTick();
+    }
 	
     public override void _PhysicsProcess(double delta)
     {
@@ -41,4 +56,36 @@ public partial class Mechanic : Player
         Velocity = velocity;
         MoveAndSlide();
     }
+    
+    public async void SteamTick()
+    {
+        while (steam <= 4)
+        {
+            await ToSignal(GetTree().CreateTimer(10f), "timeout");
+            steam += 1;
+            CurrentHealth -= 20;
+            GD.Print(CurrentHealth);
+
+            if (CurrentHealth <= 0)
+            {
+                Die();
+            }
+            else if (CurrentHealth <= 20)
+            {
+                steamSprite.Play("hp_20");
+            }
+            else if (CurrentHealth <= 40)
+            {
+                steamSprite.Play("hp_40");
+            }
+            else if (CurrentHealth <= 60)
+            {
+                steamSprite.Play("hp_60");
+            }
+            else if (CurrentHealth <= 80)
+            {
+                steamSprite.Play("hp_80");
+            }
+        }
+    } 
 }
