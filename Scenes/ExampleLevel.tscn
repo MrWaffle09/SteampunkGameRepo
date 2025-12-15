@@ -134,7 +134,7 @@ script = ExtResource("8_rud2n")
 position = Vector2(-330, 11)
 shape = SubResource("CircleShape2D_ekkkb")
 
-[node name="BasicEnemy" parent="." instance=ExtResource("9_ekkkb")]
+[node name="Gerald" parent="." instance=ExtResource("9_ekkkb")]
 position = Vector2(962, -56)
 
 [node name="SpeedUp4" parent="." instance=ExtResource("6_6w5wx")]
@@ -154,5 +154,25 @@ position = Vector2(1141, -57)
 sprite_frames = SubResource("SpriteFrames_6x3t2")
 autoplay = "default"
 frame_progress = 0.58046854
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_left = -76.0
+offset_top = -368.0
+offset_right = 277.0
+offset_bottom = -325.0
+text = "FIND THE END BEFORE YOU RUN OUT OF ENERGY"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -320.0
+offset_top = -228.0
+offset_right = -239.0
+offset_bottom = -203.0
+text = "To Pause"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="."]
+offset_left = -660.0
+offset_top = -54.0
+offset_right = -426.0
+offset_bottom = 43.0
+text = "hmmmm i wonder whats down here make sure you dont trip and \"FALL INTO THE HOLE\" *cough*"
 
 [connection signal="body_entered" from="LevelMover" to="LevelMover" method="_on_level_mover_body_entered"]

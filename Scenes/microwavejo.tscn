@@ -1,9 +1,9 @@
-[gd_scene load_steps=25 format=3 uid="uid://duqngnqypkr7f"]
+[gd_scene load_steps=24 format=3 uid="uid://duqngnqypkr7f"]
 
-[ext_resource type="Texture2D" uid="uid://ckcehtytv1m8g" path="res://Assets/Microwave/Microwave/Idle.png" id="1_akvxi"]
+[ext_resource type="Texture2D" uid="uid://cmdr7y7mwxq2y" path="res://Assets/Microwave/Microwave/Idle.png" id="1_akvxi"]
 [ext_resource type="Script" uid="uid://busr4glxgkn18" path="res://Scripts/Microwave.cs" id="1_n7v8p"]
-[ext_resource type="Texture2D" uid="uid://bcj8twyc5dpf0" path="res://Assets/Microwave/Microwave/Walk.png" id="2_n7v8p"]
-[ext_resource type="Texture2D" uid="uid://cxop2ovglua4k" path="res://Scripts/04.png" id="4_8xg0r"]
+[ext_resource type="Texture2D" uid="uid://8jy4xxvqx760" path="res://Assets/Microwave/Microwave/Walk.png" id="2_n7v8p"]
+[ext_resource type="Texture2D" uid="uid://bsmgdnwts4xfv" path="res://Assets/04.png" id="4_8xg0r"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jstk6"]
 atlas = ExtResource("1_akvxi")
@@ -99,54 +99,67 @@ animations = [{
 radius = 8.0
 height = 26.0
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_g34qc"]
-atlas = ExtResource("4_8xg0r")
-region = Rect2(288, 162, 48, 18)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rsxuv"]
-atlas = ExtResource("4_8xg0r")
-region = Rect2(240, 162, 48, 18)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5ro88"]
-atlas = ExtResource("4_8xg0r")
-region = Rect2(192, 162, 48, 18)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hauwe"]
-atlas = ExtResource("4_8xg0r")
-region = Rect2(144, 162, 48, 18)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ll4fb"]
-atlas = ExtResource("4_8xg0r")
-region = Rect2(96, 162, 48, 18)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_ng7e4"]
 atlas = ExtResource("4_8xg0r")
 region = Rect2(48, 162, 48, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8xg0r"]
+atlas = ExtResource("4_8xg0r")
+region = Rect2(240, 80, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g34qc"]
+atlas = ExtResource("4_8xg0r")
+region = Rect2(192, 80, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rsxuv"]
+atlas = ExtResource("4_8xg0r")
+region = Rect2(144, 80, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ro88"]
+atlas = ExtResource("4_8xg0r")
+region = Rect2(96, 80, 48, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_y5h8m"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_g34qc")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rsxuv")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5ro88")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hauwe")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ll4fb")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_ng7e4")
 }],
 "loop": true,
-"name": &"default",
+"name": &"hp_100",
 "speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8xg0r")
+}],
+"loop": true,
+"name": &"hp_20",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g34qc")
+}],
+"loop": true,
+"name": &"hp_40",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rsxuv")
+}],
+"loop": true,
+"name": &"hp_60",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ro88")
+}],
+"loop": true,
+"name": &"hp_80",
+"speed": 5.0
 }]
 
 [node name="Microwave" type="CharacterBody2D"]
@@ -158,7 +171,7 @@ position = Vector2(0, -24)
 sprite_frames = SubResource("SpriteFrames_a1qt4")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.7489582
+frame_progress = 0.748958
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, -17)
@@ -167,9 +180,9 @@ shape = SubResource("CapsuleShape2D_akvxi")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+[node name="hp" type="AnimatedSprite2D" parent="."]
 position = Vector2(29, -17)
-rotation = -1.5952309
+rotation = -1.59523
 sprite_frames = SubResource("SpriteFrames_y5h8m")
-autoplay = "default"
-frame_progress = 0.103449985
+animation = &"hp_80"
+autoplay = "hp_100"

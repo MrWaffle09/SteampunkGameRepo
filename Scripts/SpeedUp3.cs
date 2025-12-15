@@ -4,12 +4,20 @@ using MultiplayerProject.Scripts;
 
 public partial class SpeedUp3 : Area2D
 {
+    private CustomSignals _customSignals;
+    public int SpeedUp = (int)PowerUps.Speed3;
+
+    public override void _Ready()
+    {
+        _customSignals = GetNode<CustomSignals>("/root/CustomSignals");
+    }
     public void _on_body_entered3(Node body)
     {
+        
         GD.Print(body);
         if (body is Player player)
         {
-            player.speed += (int) PowerUps.Speed3;
+            _customSignals.EmitSignal(nameof(CustomSignals.SpeedUp), SpeedUp);
             QueueFree();
         }
         else

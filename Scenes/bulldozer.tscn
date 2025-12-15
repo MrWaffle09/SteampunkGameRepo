@@ -1,13 +1,13 @@
 [gd_scene load_steps=47 format=3 uid="uid://bk6qvtkenikmu"]
 
-[ext_resource type="Texture2D" uid="uid://cuont25at5s7u" path="res://Assets/Bulldozer/Bulldozer/Parry.png" id="1_bw2s7"]
+[ext_resource type="Texture2D" uid="uid://da8iya5fxd3si" path="res://Assets/Bulldozer/Bulldozer/Parry.png" id="1_bw2s7"]
 [ext_resource type="Script" uid="uid://dexm1amuqdkin" path="res://Scripts/Bulldozer.cs" id="1_flffy"]
-[ext_resource type="Texture2D" uid="uid://cljednd4xw02m" path="res://Assets/Bulldozer/Bulldozer/Attack.png" id="2_flffy"]
-[ext_resource type="Texture2D" uid="uid://dk4ilvhrlqjj0" path="res://Assets/Bulldozer/Bulldozer/Death.png" id="3_hqyu7"]
-[ext_resource type="Texture2D" uid="uid://dqtu6bnqsv75" path="res://Assets/Bulldozer/Bulldozer/Hit.png" id="4_8uw2f"]
-[ext_resource type="Texture2D" uid="uid://cvoggk73k0i7i" path="res://Assets/Bulldozer/Bulldozer/Idle.png" id="5_nlsev"]
-[ext_resource type="Texture2D" uid="uid://vfcx5o01s26r" path="res://Assets/Bulldozer/Bulldozer/Walk.png" id="6_atdbl"]
-[ext_resource type="Texture2D" uid="uid://cxop2ovglua4k" path="res://Scripts/04.png" id="8_hqyu7"]
+[ext_resource type="Texture2D" uid="uid://beyncs8erl3bv" path="res://Assets/Bulldozer/Bulldozer/Attack.png" id="2_flffy"]
+[ext_resource type="Texture2D" uid="uid://ccf05e16u6m0a" path="res://Assets/Bulldozer/Bulldozer/Death.png" id="3_hqyu7"]
+[ext_resource type="Texture2D" uid="uid://df3l4ekrssbj5" path="res://Assets/Bulldozer/Bulldozer/Hit.png" id="4_8uw2f"]
+[ext_resource type="Texture2D" uid="uid://dxvdrqkifwq60" path="res://Assets/Bulldozer/Bulldozer/Idle.png" id="5_nlsev"]
+[ext_resource type="Texture2D" uid="uid://cwbx7prmxi7fg" path="res://Assets/Bulldozer/Bulldozer/Walk.png" id="6_atdbl"]
+[ext_resource type="Texture2D" uid="uid://bsmgdnwts4xfv" path="res://Assets/04.png" id="8_hqyu7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oonca"]
 atlas = ExtResource("1_bw2s7")
@@ -256,47 +256,67 @@ animations = [{
 radius = 16.0
 height = 34.0
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hqyu7"]
-atlas = ExtResource("8_hqyu7")
-region = Rect2(240, 144, 48, 18)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8uw2f"]
-atlas = ExtResource("8_hqyu7")
-region = Rect2(192, 144, 48, 18)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_nlsev"]
-atlas = ExtResource("8_hqyu7")
-region = Rect2(144, 144, 48, 18)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_atdbl"]
-atlas = ExtResource("8_hqyu7")
-region = Rect2(96, 144, 48, 18)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_ewfar"]
 atlas = ExtResource("8_hqyu7")
 region = Rect2(48, 144, 48, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hqyu7"]
+atlas = ExtResource("8_hqyu7")
+region = Rect2(240, 96, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8uw2f"]
+atlas = ExtResource("8_hqyu7")
+region = Rect2(192, 96, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nlsev"]
+atlas = ExtResource("8_hqyu7")
+region = Rect2(144, 96, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_atdbl"]
+atlas = ExtResource("8_hqyu7")
+region = Rect2(48, 96, 48, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_06cvf"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hqyu7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8uw2f")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_nlsev")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_atdbl")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_ewfar")
 }],
-"loop": true,
+"loop": false,
 "name": &"hp_100",
 "speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hqyu7")
+}],
+"loop": false,
+"name": &"hp_20",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8uw2f")
+}],
+"loop": false,
+"name": &"hp_40",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nlsev")
+}],
+"loop": false,
+"name": &"hp_60",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_atdbl")
+}],
+"loop": false,
+"name": &"hp_80",
+"speed": 5.0
 }]
 
 [node name="Bulldozer2" type="CharacterBody2D"]
@@ -320,8 +340,7 @@ shape = SubResource("CapsuleShape2D_bw2s7")
 position = Vector2(25, -3)
 rotation = -1.56412
 sprite_frames = SubResource("SpriteFrames_06cvf")
-animation = &"hp_100"
+animation = &"hp_20"
 autoplay = "hp_100"
-frame_progress = 0.67780614
 
 [connection signal="child_entered_tree" from="CollisionShape2D" to="." method="OnEnemyEntered"]
