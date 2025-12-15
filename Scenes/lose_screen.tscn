@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b8uo6tpj3cdlo"]
 
-[ext_resource type="Script" uid="uid://bt8mydgsk8no0" path="res://Scripts/lose_screen.gd" id="1_488pv"]
+[ext_resource type="Script" path="res://Scenes/lose_screen.gd" id="1_488pv"]
 [ext_resource type="Texture2D" uid="uid://c2nnh3m5yj4qg" path="res://Assets/sadjotaro.jpg" id="1_s2rrh"]
 
 [node name="lose_screen" type="Node2D"]

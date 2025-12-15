@@ -6,7 +6,7 @@ using MultiplayerProject.Scripts;
 public partial class Microwave : Player
 {
 	public override int speed { get; set; } = 100;
-	public int CurrentHealth = 20;
+	public int CurrentHealth = 100;
 	private int steam = 0;
 	private AnimatedSprite2D steamSprite;
 	private CustomSignals _customSignals;
