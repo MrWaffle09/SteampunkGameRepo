@@ -2,13 +2,13 @@
 
 [ext_resource type="Script" uid="uid://drv3hvpgi1cnj" path="res://Scripts/ExampleLevel.cs" id="1_buwwh"]
 [ext_resource type="PackedScene" uid="uid://s1xr3drow0nl" path="res://Scenes/tilemap.tscn" id="2_8ysdc"]
-[ext_resource type="PackedScene" uid="uid://c1n3xi5osly0f" path="res://speed_up1.tscn" id="4_rvkij"]
-[ext_resource type="PackedScene" uid="uid://buiwqybiltfpt" path="res://speed_up2.tscn" id="5_e512q"]
-[ext_resource type="PackedScene" uid="uid://crs45x16clwt8" path="res://speed_up3.tscn" id="6_6w5wx"]
-[ext_resource type="PackedScene" uid="uid://dudweip60jgi3" path="res://pauser.tscn" id="6_e512q"]
-[ext_resource type="Texture2D" uid="uid://dtpn58u4bnwy7" path="res://Assets/XboxMenu.png" id="7_6w5wx"]
+[ext_resource type="PackedScene" uid="uid://c1n3xi5osly0f" path="res://Scenes/speed_up1.tscn" id="4_rvkij"]
+[ext_resource type="PackedScene" uid="uid://buiwqybiltfpt" path="res://Scenes/speed_up2.tscn" id="5_e512q"]
+[ext_resource type="PackedScene" uid="uid://crs45x16clwt8" path="res://Scenes/speed_up3.tscn" id="6_6w5wx"]
+[ext_resource type="PackedScene" uid="uid://dudweip60jgi3" path="res://Scenes/pauser.tscn" id="6_e512q"]
+[ext_resource type="Texture2D" uid="uid://dvxyk8sft1tp1" path="res://Assets/XboxMenu.png" id="7_6w5wx"]
 [ext_resource type="Script" uid="uid://mknl78jxxdpk" path="res://Scripts/LevelMover.cs" id="8_rud2n"]
-[ext_resource type="PackedScene" uid="uid://dbdv3knyb2tqn" path="res://Scenes/basicEnemy.tscn" id="9_ekkkb"]
+[ext_resource type="PackedScene" uid="uid://dbdv3knyb2tqn" path="res://Scenes/BasicEnemy.tscn" id="9_ekkkb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ekkkb"]
 radius = 46.5296
