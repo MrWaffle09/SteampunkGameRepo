@@ -9,6 +9,7 @@ public partial class Microwave : Player
 	public int CurrentHealth = 20;
 	private int steam = 0;
 	private AnimatedSprite2D steamSprite;
+	private CustomSignals _customSignals;
 
 	public override void Die()
 	{
@@ -25,6 +26,8 @@ public partial class Microwave : Player
 
 	public override void _Ready()
 	{
+		_customSignals = GetNode<CustomSignals>("/root/CustomSignals");
+		_customSignals.SpeedUp += SpeedUp;
 		steamSprite = GetNode<AnimatedSprite2D>("hp");
 		SteamTick();
 	}
@@ -89,5 +92,10 @@ public partial class Microwave : Player
 				steamSprite.Play("hp_80");
 			}
 		}
-	} 
+	}
+
+	private void SpeedUp(int speedUpAmount)
+	{
+		speed += speedUpAmount;
+	}
 }

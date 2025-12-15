@@ -6,10 +6,11 @@ public partial class Bulldozer : Player
 {
     
     public int CurrentHealth = 100;
-
     public AnimatedSprite2D animatedSprite2D;
     private int steam = 0;
     private AnimatedSprite2D steamSprite;
+    private CustomSignals _customSignals;
+
 
 
     
@@ -29,6 +30,8 @@ public partial class Bulldozer : Player
     
     public override void _Ready()
     {
+        _customSignals = GetNode<CustomSignals>("/root/CustomSignals");
+        _customSignals.SpeedUp += SpeedUp;
         steamSprite = GetNode<AnimatedSprite2D>("hp");
         SteamTick();
     }
@@ -127,4 +130,8 @@ public partial class Bulldozer : Player
             }
         }
     } 
+    private void SpeedUp(int speedUpAmount)
+    {
+        speed += speedUpAmount;
+    }
 }

@@ -8,6 +8,8 @@ public partial class Capybara : Player
     public int CurrentHealth = 100;
     private int steam = 0;
     private AnimatedSprite2D steamSprite;
+    private CustomSignals _customSignals;
+
 
     public override void Die()
     {
@@ -23,6 +25,8 @@ public partial class Capybara : Player
     
     public override void _Ready()
     {
+        _customSignals = GetNode<CustomSignals>("/root/CustomSignals");
+        _customSignals.SpeedUp += SpeedUp;
         steamSprite = GetNode<AnimatedSprite2D>("hp");
         SteamTick();
     }
@@ -90,4 +94,9 @@ public partial class Capybara : Player
             }
         }
     } 
+    
+    private void SpeedUp(int speedUpAmount)
+    {
+        speed += speedUpAmount;
+    }
 }
