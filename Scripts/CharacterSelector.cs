@@ -40,6 +40,8 @@ public partial class CharacterSelector : Node2D
                     _capyText.Text = "Seleceted";
                     UsedIDs.Add(@event.Device);
                     GameManager.activeCharacters.Add("Capy");
+                    GameManager.alivePlayers += 1;
+
                 }
             }
         }
@@ -54,7 +56,8 @@ public partial class CharacterSelector : Node2D
                     MechCanSelect = false;
                     _mechText.Text = "Selected";
                     UsedIDs.Add(@event.Device);
-                    GameManager.activeCharacters.Add("Mech"); ;
+                    GameManager.activeCharacters.Add("Mech");
+                    GameManager.alivePlayers += 1;
                 }
             }
         }
@@ -69,7 +72,9 @@ public partial class CharacterSelector : Node2D
                     MicroCanSelect = false;
                     _microText.Text = "Selected";
                     UsedIDs.Add(@event.Device);
-                    GameManager.activeCharacters.Add("Micro"); ;
+                    GameManager.activeCharacters.Add("Micro"); 
+                    GameManager.alivePlayers += 1;
+
                 }
             }
         }
@@ -85,6 +90,7 @@ public partial class CharacterSelector : Node2D
                     _bullText.Text = "Selected";
                     UsedIDs.Add(@event.Device);
                     GameManager.activeCharacters.Add("Bull"); 
+                    GameManager.alivePlayers += 1;
                 }
             }
         }
