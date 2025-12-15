@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://cgoctc7myuy0e"]
+[gd_scene load_steps=24 format=4 uid="uid://cgoctc7myuy0e"]
 
 [ext_resource type="Script" uid="uid://drv3hvpgi1cnj" path="res://Scripts/ExampleLevel.cs" id="1_buwwh"]
 [ext_resource type="PackedScene" uid="uid://s1xr3drow0nl" path="res://Scenes/tilemap.tscn" id="2_8ysdc"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://mknl78jxxdpk" path="res://Scripts/LevelMover.cs" id="8_rud2n"]
 [ext_resource type="PackedScene" uid="uid://dbdv3knyb2tqn" path="res://Scenes/BasicEnemy.tscn" id="9_ekkkb"]
 [ext_resource type="Texture2D" uid="uid://bkg4mmdkx4dbh" path="res://Assets/mainmenu/Chests.png" id="10_2ctul"]
+[ext_resource type="Texture2D" uid="uid://c46ojlhnls0kc" path="res://Assets/mainmenu/Pixelart arrow icon pack 1.0.png" id="11_xw1dy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ekkkb"]
 radius = 46.5296
@@ -55,6 +56,42 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 4.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6x3t2"]
+atlas = ExtResource("11_xw1dy")
+region = Rect2(0, 0, 15, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w8hkc"]
+atlas = ExtResource("11_xw1dy")
+region = Rect2(15, 0, 15, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bsbsy"]
+atlas = ExtResource("11_xw1dy")
+region = Rect2(30, 0, 15, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e5lxb"]
+atlas = ExtResource("11_xw1dy")
+region = Rect2(45, 0, 15, 18)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4ccvn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6x3t2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w8hkc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bsbsy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e5lxb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
 }]
 
 [node name="ExampleLevel" type="Node2D"]
@@ -175,5 +212,10 @@ offset_top = -54.0
 offset_right = -426.0
 offset_bottom = 43.0
 text = "hmmmm i wonder whats down here make sure you dont trip and \"FALL INTO THE HOLE\" *cough*"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(-349, 46)
+sprite_frames = SubResource("SpriteFrames_4ccvn")
+frame_progress = 0.825143
 
 [connection signal="body_entered" from="LevelMover" to="LevelMover" method="_on_level_mover_body_entered"]
